@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boilerplate/Modules/MainCoinsViewController.swift"
+            timestampString = "537594343.817292"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "MainSearchViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boilerplate/Modules/Interactor/MainSearchInteractor.swift"
+            timestampString = "537594343.818087"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "retrieveCoins()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Boilerplate.MainSearchInteractor.retrieveCoins() -&gt; ()"
+                  moduleName = "Boilerplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victormagalhaes/Desktop/Boilerplate_iOS_VIPER-master/Boilerplate/Modules/Interactor/MainSearchInteractor.swift"
+                  timestampString = "537577862.745967"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Boilerplate.Coin&gt;) -&gt; () in Boilerplate.MainSearchInteractor.retrieveCoins() -&gt; ()"
+                  moduleName = "Boilerplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victormagalhaes/Desktop/Boilerplate_iOS_VIPER-master/Boilerplate/Modules/Interactor/MainSearchInteractor.swift"
+                  timestampString = "537577862.747749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boilerplate/Modules/Interactor/MainSearchInteractor.swift"
+            timestampString = "537594343.818132"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "retrieveCoins()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boilerplate/Modules/Interactor/MainSearchInteractor.swift"
+            timestampString = "537594343.81817"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "retrieveCoins()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boilerplate/Modules/Interactor/MainSearchInteractor.swift"
+            timestampString = "537594343.818206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "retrieveCoins()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Boilerplate.Coin&gt;) -&gt; () in Boilerplate.MainSearchInteractor.retrieveCoins() -&gt; ()"
+                  moduleName = "Boilerplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victormagalhaes/Desktop/Boilerplate_iOS_VIPER-master/Boilerplate/Modules/Interactor/MainSearchInteractor.swift"
+                  timestampString = "537577862.762009"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Boilerplate.CoinAttributes) -&gt; () in closure #1 (Swift.Optional&lt;Boilerplate.Coin&gt;) -&gt; () in Boilerplate.MainSearchInteractor.retrieveCoins() -&gt; ()"
+                  moduleName = "Boilerplate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/victormagalhaes/Desktop/Boilerplate_iOS_VIPER-master/Boilerplate/Modules/Interactor/MainSearchInteractor.swift"
+                  timestampString = "537577862.764033"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "324">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boilerplate/Modules/Interactor/MainSearchInteractor.swift"
+            timestampString = "537594343.818241"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "retrieveCoins()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boilerplate/Modules/MainCoinsViewController.swift"
+            timestampString = "537594343.818279"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "MainSearchViewController"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

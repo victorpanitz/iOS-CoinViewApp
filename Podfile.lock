@@ -1,0 +1,61 @@
+PODS:
+  - Alamofire (4.6.0)
+  - AlamofireObjectMapper (5.0.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.0)
+  - Crashlytics (3.9.3):
+    - Fabric (~> 1.7.2)
+  - Fabric (1.7.2)
+  - KeychainSwift (7.0.1)
+  - Localize-Swift (1.7.1)
+  - MBProgressHUD (1.0.0)
+  - NextResponderTextField (3.0.0)
+  - Nuke (6.0)
+  - ObjectMapper (3.0.0)
+  - ObjectMapper+Realm (0.5):
+    - ObjectMapper
+    - RealmSwift
+  - ReachabilitySwift (3)
+  - Realm (3.0.2):
+    - Realm/Headers (= 3.0.2)
+  - Realm/Headers (3.0.2)
+  - RealmSwift (3.0.2):
+    - Realm (= 3.0.2)
+  - UIColor_Hex_Swift (3.0.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.6.0)
+  - AlamofireObjectMapper (~> 5.0.0)
+  - Crashlytics
+  - Fabric
+  - KeychainSwift (~> 7.0)
+  - Localize-Swift (~> 1.6)
+  - MBProgressHUD (~> 1.0.0)
+  - NextResponderTextField
+  - Nuke (~> 6.0)
+  - ObjectMapper (~> 3.0.0)
+  - ObjectMapper+Realm
+  - ReachabilitySwift (~> 3)
+  - RealmSwift (~> 3.0.2)
+  - UIColor_Hex_Swift (~> 3.0.1)
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
+  Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
+  KeychainSwift: 7e15d26b1d6fc504a5eadb89a3e8ab17b2d3573a
+  Localize-Swift: 6cabc1087c0e910e77bfa87c2ed3f65c80c0b2df
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  NextResponderTextField: 07ee7b2737981bfd402f63f390bf3de55e245ccd
+  Nuke: d83812262734dad51e3c498cb1c4f7923f2b78c6
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  ObjectMapper+Realm: 3188789fb77c189c7a83cb625333a607eb61a08f
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
+
+PODFILE CHECKSUM: 4df4c9c0880168d336d895bb84a1d64d3649ea56
+
+COCOAPODS: 1.4.0.rc.1
