@@ -14,18 +14,19 @@ class MainSearchRouter {
     // MARK: Properties
     
     weak var view: UIViewController?
-    
+    weak var delegate: MainSearchViewController?
+
     // MARK: Static methods
     
     static func setupModule() -> MainSearchViewController {
         
         let viewController = UIStoryboard.loadViewController() as MainSearchViewController
-        
+
+
         let presenter = MainSearchPresenter()
         let router = MainSearchRouter()
         let interactor = MainSearchInteractor()
         
-    
         viewController.presenter =  presenter
         
         presenter.view = viewController
@@ -42,5 +43,11 @@ class MainSearchRouter {
 
 
 extension MainSearchRouter: MainSearchWireframe {
+    func showCoinDetail(_ coinAttributes: CoinAttributes) {
+        view?.present(CoinDetailRouter.setupModule(coinAttributes), animated: true, completion: nil)
+    }
+    
     // TODO: Implement wireframe methods
 }
+
+

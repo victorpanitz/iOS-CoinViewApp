@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Coin Detail View Controller-->
+        <scene sceneID="fuf-2b-KsO">
+            <objects>
+                <viewController storyboardIdentifier="CoinDetailViewController" id="CZx-xz-miV" customClass="CoinDetailViewController" customModule="Boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EwW-2C-K8N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-9l-yre">
+                                <rect key="frame" x="0.0" y="176" width="375" height="435"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="wbt-3V-tMq" customClass="coinDetailCell" customModule="Boilerplate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wbt-3V-tMq" id="XJa-Pq-Jel">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price : 0.00023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qQ-Oc-DEZ">
+                                                    <rect key="frame" x="8" y="13" width="359" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8qQ-Oc-DEZ" secondAttribute="trailing" constant="8" id="5hm-r9-nMV"/>
+                                                <constraint firstItem="8qQ-Oc-DEZ" firstAttribute="leading" secondItem="XJa-Pq-Jel" secondAttribute="leading" constant="8" id="ZfI-Tk-B04"/>
+                                                <constraint firstItem="8qQ-Oc-DEZ" firstAttribute="centerY" secondItem="XJa-Pq-Jel" secondAttribute="centerY" id="mOD-ok-48x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THI-2f-Sac">
+                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="3Rg-Il-pq0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="DONATE">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t30-7z-nan">
+                                <rect key="frame" x="121" y="36" width="132" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="t30-7z-nan" secondAttribute="height" multiplier="1:1" id="WGf-po-7Av"/>
+                                    <constraint firstAttribute="height" constant="132" id="ZnN-gk-Joe"/>
+                                    <constraint firstAttribute="width" constant="132" id="jSY-rT-jZA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t30-7z-nan" firstAttribute="centerX" secondItem="EwW-2C-K8N" secondAttribute="centerX" id="8Bk-wu-n7n"/>
+                            <constraint firstItem="t30-7z-nan" firstAttribute="top" secondItem="j9Q-5U-yaB" secondAttribute="top" constant="16" id="EbD-A4-8uq"/>
+                            <constraint firstItem="THI-2f-Sac" firstAttribute="top" secondItem="Xtd-9l-yre" secondAttribute="bottom" id="GKZ-tV-xCx"/>
+                            <constraint firstItem="THI-2f-Sac" firstAttribute="leading" secondItem="j9Q-5U-yaB" secondAttribute="leading" id="If2-VK-O7N"/>
+                            <constraint firstItem="THI-2f-Sac" firstAttribute="trailing" secondItem="j9Q-5U-yaB" secondAttribute="trailing" id="L2K-kD-wpx"/>
+                            <constraint firstItem="THI-2f-Sac" firstAttribute="bottom" secondItem="j9Q-5U-yaB" secondAttribute="bottom" id="NsC-w8-VhT"/>
+                            <constraint firstItem="Xtd-9l-yre" firstAttribute="top" secondItem="t30-7z-nan" secondAttribute="bottom" constant="8" id="UVH-wa-BBl"/>
+                            <constraint firstItem="Xtd-9l-yre" firstAttribute="leading" secondItem="j9Q-5U-yaB" secondAttribute="leading" id="YO9-SZ-9hu"/>
+                            <constraint firstItem="Xtd-9l-yre" firstAttribute="trailing" secondItem="j9Q-5U-yaB" secondAttribute="trailing" id="fUn-j0-4nS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j9Q-5U-yaB"/>
+                    </view>
+                    <connections>
+                        <outlet property="mCoinImageView" destination="t30-7z-nan" id="97c-nm-yG7"/>
+                        <outlet property="mTableView" destination="Xtd-9l-yre" id="FiY-38-8a1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="185-7D-dnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13503.200000000001" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+</document>

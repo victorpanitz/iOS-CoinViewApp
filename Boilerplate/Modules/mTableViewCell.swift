@@ -11,10 +11,10 @@ import UIKit
 
 class mTableViewCell : UITableViewCell{
     
-
+    var coinAttributes: CoinAttributes?
+    
     @IBOutlet weak var coinTitleLabel: UILabel!
     @IBOutlet weak var coinReferenceLabel: UILabel!
-    
     @IBOutlet weak var coinLogoImageView: UIImageView!
     
 }

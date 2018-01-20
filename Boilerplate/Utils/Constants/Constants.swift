@@ -12,7 +12,9 @@ import Localize_Swift
 enum Constants {
     
     enum URL {
-        static let baseURL = "https://bittrex.com/api/v1.1/public/getmarkets"
+        static let baseURL = "https://bittrex.com/api/v1.1/public/"
+        static let getMarkets = "getmarkets"
+        static let coindetail = "getmarketsummary?market="
         static let signUp = baseURL + ""
         static let login = baseURL + "auth/"
     }

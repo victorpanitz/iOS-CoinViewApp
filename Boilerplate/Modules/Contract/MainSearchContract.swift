@@ -17,6 +17,7 @@ protocol MainSearchView: BaseView {
 protocol MainSearchPresentation: class {
     func doSomething()
     func retrieveCoins()
+    func showCoinDetail(_ coinAttributes: CoinAttributes)
 }
 
 protocol MainSearchUseCase: class {
@@ -29,5 +30,5 @@ protocol MainSearchInteractorOutput: class {
 }
 
 protocol MainSearchWireframe: class {
-    
+    func showCoinDetail(_ coinAttributes: CoinAttributes)
 }

@@ -8,20 +8,24 @@
 import UIKit
 
 class RootRouter: NSObject {
-    
+
     func presentFirstScreen(inWindow window: UIWindow) {
         presentMainSearchScreen()
     }
-    
+
     private func presentMainSearchScreen() {
         let mainSearchViewController = MainSearchRouter.setupModule()
+//        let navigationCompanies = UINavigationController()
+//        navigationCompanies.viewControllers = [mainSearchViewController]
         presentView(mainSearchViewController)
     }
-    
+
     private func presentView(_ viewController: UIViewController) {
         guard let window = UIApplication.shared.delegate?.window! else { return }
         window.backgroundColor = UIColor.white
         window.makeKeyAndVisible()
         window.rootViewController = viewController
-    }    
+    }
 }
+
+

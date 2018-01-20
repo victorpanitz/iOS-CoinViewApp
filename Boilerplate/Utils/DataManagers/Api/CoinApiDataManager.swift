@@ -17,14 +17,23 @@ class CoinApiDataManager: NSObject {
     //TODO: Requestes related to User, Profile, CompanyProfile and similar entities can be implemented here
     
     func fetchCoins(completion: @escaping ((_ coins: Coin?) -> ())) {
-       // guard let header = SessionHelper.shared.authorizationHeader else { return }
-        let url = Constants.URL.baseURL
+        let url = Constants.URL.baseURL + Constants.URL.getMarkets
         Alamofire
             .request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseObject(completionHandler: { (response: DataResponse<Coin>) in
                 completion(response.result.value)
-                
             })
     }
+    
+    func fetchCoinDetail(_ coin: String, completion: @escaping ((_ coins: Coin?) -> ())) {
+        let url = Constants.URL.baseURL + Constants.URL.coindetail + coin
+        Alamofire
+            .request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .responseObject(completionHandler: { (response: DataResponse<Coin>) in
+                completion(response.result.value)
+            })
+    }
+    
+    
     
 }

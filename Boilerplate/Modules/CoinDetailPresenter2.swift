@@ -1,44 +1,45 @@
 //
-//  MainSearchPresenter.swift
+//  CoinDetailPresenter.swift
 //  Boilerplate
 //
-//  Created by MARCELO GRACIETTI on 23/01/17.
-//  Copyright © 2017 Cheesecake Labs. All rights reserved.
+//  Created by Victor Magalhaes on 14/01/2018.
+//  Copyright © 2018 Cheesecake Labs. All rights reserved.
 //
 
 import Foundation
 
 
-class MainSearchPresenter {
+class CoinDetailPresenter {
     
     // MARK: Properties
     
-    weak var view: MainSearchView?
-    var router: MainSearchWireframe?
-    var interactor: MainSearchUseCase?
+    weak var view: CoinDetailView?
+    var router: CoinDetailWireframe?
+    var interactor: CoinDetailUseCase?
     
 }
 
-extension MainSearchPresenter: MainSearchPresentation {
-    func showCoinDetail(_ coinAttributes: CoinAttributes) {
-        router?.showCoinDetail(coinAttributes)
+extension CoinDetailPresenter: CoinDetailPresentation {
+    
+    
+    func retrieveCoins(marketName: String) {
+        view?.updateIndicator(state: true)
+       // interactor?.retrieveCoins(marketName: <#String#>)
     }
     
-    func retrieveCoins() {
-        view?.updateIndicator(state: true)
-        interactor?.retrieveCoins()
-    }
     
     
     func doSomething() {
         view?.showMessage("I'm doing something!!", withTitle: "Hey")
     }
     
+    
+    
     //TODO: Implement other methods from presenter->view here
     
 }
 
-extension MainSearchPresenter: MainSearchInteractorOutput {
+extension CoinDetailPresenter: CoinDetailInteractorOutput {
     func onFetchCoins(mCoins: [CoinAttributes], error: String?) {
         view?.updateIndicator(state: false)
         view?.updateCoinTable(mCoins: mCoins)
@@ -49,5 +50,7 @@ extension MainSearchPresenter: MainSearchInteractorOutput {
         view?.updateIndicator(state: false)
         view?.showError(message)
     }
+    
+    
     
 }

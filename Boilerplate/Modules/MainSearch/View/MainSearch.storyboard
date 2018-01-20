@@ -73,9 +73,6 @@
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03V-nP-By6">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Uh7-Dd-lf2"/>
-                                </constraints>
                                 <items>
                                     <navigationItem title="Coin View" id="CRi-Fp-38S">
                                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="refresh" id="njB-Ii-lrc">
@@ -107,22 +104,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="03V-nP-By6" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="4MT-ds-o8N"/>
+                            <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="03V-nP-By6" secondAttribute="bottom" id="0ma-nT-y1o"/>
+                            <constraint firstItem="03V-nP-By6" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="75O-FR-Vi2"/>
+                            <constraint firstItem="03V-nP-By6" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="Ddw-Gs-ey0"/>
                             <constraint firstItem="V4x-5O-PZN" firstAttribute="top" secondItem="vbh-bU-vUR" secondAttribute="bottom" id="Jem-sx-Iif"/>
-                            <constraint firstItem="03V-nP-By6" firstAttribute="top" secondItem="W6v-ap-3sT" secondAttribute="top" id="Lq5-Um-Tc4"/>
                             <constraint firstItem="896-DI-maA" firstAttribute="top" secondItem="W6v-ap-3sT" secondAttribute="top" constant="12" id="Mvj-TN-CSi"/>
                             <constraint firstItem="V4x-5O-PZN" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="PUG-wl-Dx1"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="UUI-Xl-vHJ"/>
                             <constraint firstItem="V4x-5O-PZN" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="bc8-61-kCJ"/>
-                            <constraint firstItem="03V-nP-By6" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="cCZ-gA-aQZ"/>
                             <constraint firstItem="W6v-ap-3sT" firstAttribute="trailing" secondItem="896-DI-maA" secondAttribute="trailing" constant="16" id="dfA-uC-5q7"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="h6c-fH-EsT"/>
-                            <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="03V-nP-By6" secondAttribute="bottom" id="kCJ-u2-lSj"/>
                             <constraint firstItem="V4x-5O-PZN" firstAttribute="bottom" secondItem="W6v-ap-3sT" secondAttribute="bottom" id="nUj-Ob-huW"/>
+                            <constraint firstItem="03V-nP-By6" firstAttribute="top" secondItem="W6v-ap-3sT" secondAttribute="top" id="r0q-iR-n0b"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="896-DI-maA" secondAttribute="bottom" constant="12" id="vYE-pl-717"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W6v-ap-3sT"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HtP-A2-tpd"/>
                     <connections>
                         <outlet property="mTableView" destination="vbh-bU-vUR" id="Dd8-9W-99c"/>
                         <outlet property="progressIndicator" destination="896-DI-maA" id="Tkg-sa-bPY"/>
@@ -130,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16M-Qk-2S3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16562" y="143"/>
+            <point key="canvasLocation" x="-14190" y="142.6056338028169"/>
         </scene>
     </scenes>
 </document>

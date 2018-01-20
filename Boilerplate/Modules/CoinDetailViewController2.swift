@@ -1,22 +1,22 @@
 //
-//  MainSearchViewController.swift
+//  CoinDetailViewController.swift
 //  Boilerplate
 //
-//  Created by MARCELO GRACIETTI on 23/01/17.
-//  Copyright © 2017 Cheesecake Labs. All rights reserved.
+//  Created by Victor Magalhaes on 14/01/2018.
+//  Copyright © 2018 Cheesecake Labs. All rights reserved.
 //
 
 import UIKit
 import Nuke
 
-class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableViewDelegate, UITableViewDataSource {
-  
+class CoinDetailViewController: BaseViewController, StoryboardLoadable, UITableViewDelegate, UITableViewDataSource {
+    
     
     var manager = Nuke.Manager.shared
     var mCoins : [CoinAttributes] = []
     // MARK: Properties
     
-    var presenter: MainSearchPresentation?
+    var presenter: CoinDetailPresentation?
     
     // MARK: IBOutlets
     
@@ -31,16 +31,15 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
         
         self.mTableView.delegate = self
         self.mTableView.dataSource = self
-        self.mTableView.allowsMultipleSelection = false
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.red
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "icArrowLeft")
         
         setupView()
         hideKeyboardWhenTappedAround()
-        presenter?.retrieveCoins()
+        //presenter?.retrieveCoins(marketName: )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +47,7 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
         setupKeyboardNotifications(with: scrollView)
     }
     
-    override func viewWillDisappear(_ animated: Bool) { 
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         removeKeyboardNotification()
     }
@@ -59,40 +58,26 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mTableView.dequeueReusableCell(withIdentifier: "mCell", for: indexPath) as! mTableViewCell
-        cell.coinAttributes = self.mCoins[indexPath.row]
-            if(self.mCoins[indexPath.row].logoUrl != nil){
-                let url = URL(string: self.mCoins[indexPath.row].logoUrl!)
-                cell.coinLogoImageView.image = nil
-                self.manager.loadImage(with: url!, into: cell.coinLogoImageView)
-            }
-        cell.coinTitleLabel.text = mCoins[indexPath.row].marketCurrencyLong
-        cell.coinReferenceLabel.text = "Ref.: \(mCoins[indexPath.row].baseCurrencyLong!)"
+
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let coinAttribute: CoinAttributes = mCoins[indexPath.row] {
-            presenter?.showCoinDetail(coinAttribute)
-        }
-    }
-    
-    
-    
     
     // MARK: IBActions
     
-  
+    
     @IBAction func refreshCoins(_ sender: Any) {
-        presenter?.retrieveCoins()
+//        presenter?.retrieveCoins()
     }
     
     // MARK: Private
     
     private func setupView() {
         // TODO: Setup view here
+        self.view.backgroundColor = UIColor.black
     }
-
+    
     
     func moveToNextField(_ view: UIView, nextFieldTag: Int) {
         let nextResponder = view.superview?.viewWithTag(nextFieldTag) as UIResponder!
@@ -102,10 +87,10 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
             view.resignFirstResponder()
         }
     }
- 
+    
 }
 
-extension  MainSearchViewController: MainSearchView {
+extension  CoinDetailViewController: CoinDetailView {
     func updateIndicator(state: Bool) {
         if state {
             self.progressIndicator.isHidden = false
@@ -117,21 +102,10 @@ extension  MainSearchViewController: MainSearchView {
     }
     
     func updateCoinTable(mCoins: [CoinAttributes]) {
-        self.mCoins = mCoins
-        self.mCoins.sort { (first, next) -> Bool in
-            return first.marketCurrencyLong!.compare(next.marketCurrencyLong!) == .orderedAscending
-        }
-        
-        DispatchQueue.main.async() {
-            self.mTableView.reloadData()
-            self.mTableView.tableFooterView = UIView(frame: .zero)
-        }
         
     }
     
-    
-    //TODO: Implement MainSearchView methods here
-    
+        
     
 }
 

@@ -14,22 +14,35 @@ import Localize_Swift
 class CoinAttributes: Object, Mappable {
     
 
-    @objc dynamic var MarketCurrency: String?
-    @objc dynamic var BaseCurrency: String?
-    @objc dynamic var MarketCurrencyLong: String?
-    @objc dynamic var BaseCurrencyLong: String?
-    @objc dynamic var MinTradeSize = 0
-    @objc dynamic var MarketName: String?
-    @objc dynamic var IsActive = 0
-    @objc dynamic var Created: Date?
-    @objc dynamic var Notice: String?
-    @objc dynamic var IsSponsored = 0
-    @objc dynamic var LogoUrl: String?
+    @objc dynamic var marketCurrency: String?
+    @objc dynamic var baseCurrency: String?
+    @objc dynamic var marketCurrencyLong: String?
+    @objc dynamic var baseCurrencyLong: String?
+    @objc dynamic var minTradeSize = 0
+    @objc dynamic var marketName: String?
+    @objc dynamic var isActive = 0
+    @objc dynamic var created: Date?
+    @objc dynamic var notice: String?
+    @objc dynamic var isSponsored = 0
+    @objc dynamic var logoUrl: String?
+    @objc dynamic var high = 0
+    @objc dynamic var low = 0
+    @objc dynamic var volume = 0
+    @objc dynamic var last = 0
+    @objc dynamic var baseVolume = 0
+    @objc dynamic var timeStamp: Date?
+    @objc dynamic var bid = 0
+    @objc dynamic var ask = 0
+    @objc dynamic var openBuyOrders = 0
+    @objc dynamic var openSellOrders = 0
+    @objc dynamic var prevDay = 0
+    
+    
     
     // MARK: Init methods
     
     override static func primaryKey() -> String? {
-        return "MarketCurrencyLong"
+        return "marketCurrencyLong"
     }
     
     convenience required init?(map: Map) {
@@ -42,17 +55,29 @@ class CoinAttributes: Object, Mappable {
         
         // Main Search Data
         
-        MarketCurrency <- map["MarketCurrency"]
-        BaseCurrency <- map["BaseCurrency"]
-        MarketCurrencyLong <- map["MarketCurrencyLong"]
-        BaseCurrencyLong <- map["BaseCurrencyLong"]
-        MinTradeSize <- map["MinTradeSize"]
-        MarketName <- map["MarketName"]
-        IsActive <- map["IsActive"]
-        Created <- map["Created"]
-        Notice <- map["Notice"]
-        IsSponsored <- map["IsSponsored"]
-        LogoUrl <- map["LogoUrl"]
+        marketCurrency <- map["MarketCurrency"]
+        baseCurrency <- map["BaseCurrency"]
+        marketCurrencyLong <- map["MarketCurrencyLong"]
+        baseCurrencyLong <- map["BaseCurrencyLong"]
+        minTradeSize <- map["MinTradeSize"]
+        marketName <- map["MarketName"]
+        isActive <- map["IsActive"]
+        created <- map["Created"]
+        notice <- map["Notice"]
+        isSponsored <- map["IsSponsored"]
+        logoUrl <- map["LogoUrl"]
+        high <- map["High"]
+        low <- map["Low"]
+        volume <- map["Volume"]
+        last <- map["Last"]
+        baseVolume <- map["BaseVolume"]
+        timeStamp <- map["TimeStamp"]
+        bid <- map["Bid"]
+        ask <- map["Ask"]
+        openBuyOrders <- map["OpenBuyOrders"]
+        openSellOrders <- map["OpenSellOrders"]
+        prevDay <- map["PrevDay"]
+        
 
     }
 }
