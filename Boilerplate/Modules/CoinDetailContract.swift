@@ -16,6 +16,7 @@ protocol CoinDetailView: BaseView {
 
 protocol CoinDetailPresentation: class {
     func doSomething()
+    func dismissView()
     func updateView(coin: CoinAttributes)
     func retrieveCoins(marketName: String)
     
@@ -31,6 +32,6 @@ protocol CoinDetailInteractorOutput: class {
 }
 
 protocol CoinDetailWireframe: class {
-    
+    func dismissView()
 }
 

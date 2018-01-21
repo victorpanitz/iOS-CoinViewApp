@@ -8,6 +8,8 @@ target 'Boilerplate' do
   pod 'NextResponderTextField'
   pod 'Localize-Swift', '~> 1.6'
   pod 'Alamofire', '~> 4.6.0'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
   pod 'ObjectMapper', '~> 3.0.0'
   pod 'ObjectMapper+Realm'
   pod 'AlamofireObjectMapper', '~> 5.0.0'

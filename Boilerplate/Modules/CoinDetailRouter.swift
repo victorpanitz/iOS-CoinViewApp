@@ -43,6 +43,11 @@ class CoinDetailRouter {
 
 
 extension CoinDetailRouter: CoinDetailWireframe {
+    func dismissView() {
+        view?.dismiss(animated: true, completion: nil)
+    }
+    
     // TODO: Implement wireframe methods
+    
 }
 

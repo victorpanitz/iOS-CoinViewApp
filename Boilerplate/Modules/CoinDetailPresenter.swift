@@ -20,6 +20,10 @@ class CoinDetailPresenter {
 }
 
 extension CoinDetailPresenter: CoinDetailPresentation {
+    func dismissView() {
+        router?.dismissView()
+    }
+    
     func updateView(coin: CoinAttributes) {
         view?.updateView(coin: coin)
     }
@@ -28,6 +32,7 @@ extension CoinDetailPresenter: CoinDetailPresentation {
         view?.updateIndicator(state: true)
         // interactor?.retrieveCoins(marketName: <#String#>)
     }
+    
     
     
     

@@ -21,6 +21,7 @@ class CoinDetailViewController: BaseViewController, StoryboardLoadable, UITableV
     
     // MARK: IBOutlets
     
+    @IBOutlet var mNavigationBar: UINavigationBar!
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mTableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -58,13 +59,13 @@ class CoinDetailViewController: BaseViewController, StoryboardLoadable, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.mTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! coinDetailCell
+        let cell = self.mTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CoinDetailCell
         return cell
     }
     
     
     @IBAction func dismissView(_ sender: Any) {
-        
+        presenter?.dismissView()
     }
     
     @IBAction func refreshCoins(_ sender: Any) {
@@ -105,6 +106,11 @@ extension  CoinDetailViewController: CoinDetailView {
     
     func updateView(coin: CoinAttributes) {
         self.mCoin = coin
+        
+        if self.mNavigationBar != nil{
+            self.mNavigationBar.topItem?.title = self.mCoin?.marketCurrencyLong
+        }
+        
         if(coin.logoUrl != nil){
             let url = URL(string: coin.logoUrl!)
             if( url != nil){

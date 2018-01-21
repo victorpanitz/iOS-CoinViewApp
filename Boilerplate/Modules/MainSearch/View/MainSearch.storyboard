@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,8 +25,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-bU-vUR">
-                                <rect key="frame" x="0.0" y="64" width="320" height="448"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-bU-vUR">
+                                <rect key="frame" x="0.0" y="120" width="320" height="392"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mCell" rowHeight="80" id="n7T-9h-90w" customClass="mTableViewCell" customModule="Boilerplate" customModuleProvider="target">
@@ -101,27 +102,38 @@
                                     <constraint firstAttribute="height" constant="20" id="y5f-6K-gPW"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QoB-dt-VeK">
+                                <rect key="frame" x="0.0" y="64" width="320" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QoB-dt-VeK" secondAttribute="height" multiplier="40:7" id="3JL-PY-YA8"/>
+                                    <constraint firstAttribute="height" constant="56" id="psd-Ih-NuP"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="03V-nP-By6" secondAttribute="bottom" id="0ma-nT-y1o"/>
+                            <constraint firstItem="vbh-bU-vUR" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="2gK-sz-KW9"/>
+                            <constraint firstItem="V4x-5O-PZN" firstAttribute="top" secondItem="vbh-bU-vUR" secondAttribute="bottom" id="3R3-gF-mY3"/>
                             <constraint firstItem="03V-nP-By6" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="75O-FR-Vi2"/>
+                            <constraint firstItem="QoB-dt-VeK" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="85k-g5-Yhh"/>
                             <constraint firstItem="03V-nP-By6" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="Ddw-Gs-ey0"/>
-                            <constraint firstItem="V4x-5O-PZN" firstAttribute="top" secondItem="vbh-bU-vUR" secondAttribute="bottom" id="Jem-sx-Iif"/>
+                            <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="QoB-dt-VeK" secondAttribute="bottom" id="JAb-YV-YlE"/>
+                            <constraint firstItem="QoB-dt-VeK" firstAttribute="top" secondItem="03V-nP-By6" secondAttribute="bottom" id="Jk1-V5-lZI"/>
                             <constraint firstItem="896-DI-maA" firstAttribute="top" secondItem="W6v-ap-3sT" secondAttribute="top" constant="12" id="Mvj-TN-CSi"/>
                             <constraint firstItem="V4x-5O-PZN" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="PUG-wl-Dx1"/>
-                            <constraint firstItem="vbh-bU-vUR" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="UUI-Xl-vHJ"/>
                             <constraint firstItem="V4x-5O-PZN" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="bc8-61-kCJ"/>
                             <constraint firstItem="W6v-ap-3sT" firstAttribute="trailing" secondItem="896-DI-maA" secondAttribute="trailing" constant="16" id="dfA-uC-5q7"/>
-                            <constraint firstItem="vbh-bU-vUR" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="h6c-fH-EsT"/>
+                            <constraint firstItem="vbh-bU-vUR" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="mzn-Q0-LxN"/>
                             <constraint firstItem="V4x-5O-PZN" firstAttribute="bottom" secondItem="W6v-ap-3sT" secondAttribute="bottom" id="nUj-Ob-huW"/>
                             <constraint firstItem="03V-nP-By6" firstAttribute="top" secondItem="W6v-ap-3sT" secondAttribute="top" id="r0q-iR-n0b"/>
-                            <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="896-DI-maA" secondAttribute="bottom" constant="12" id="vYE-pl-717"/>
+                            <constraint firstItem="QoB-dt-VeK" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="tom-HQ-1qJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W6v-ap-3sT"/>
                     </view>
                     <navigationItem key="navigationItem" id="HtP-A2-tpd"/>
                     <connections>
+                        <outlet property="mSearchBar" destination="QoB-dt-VeK" id="T7c-BN-2Mu"/>
                         <outlet property="mTableView" destination="vbh-bU-vUR" id="Dd8-9W-99c"/>
                         <outlet property="progressIndicator" destination="896-DI-maA" id="Tkg-sa-bPY"/>
                     </connections>

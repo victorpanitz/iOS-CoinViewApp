@@ -17,7 +17,7 @@
 		337EB0761DD39BCB00733F9C /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0731DD39BCB00733F9C /* SanFranciscoText-Light.otf */; };
 		337EB0771DD39BCB00733F9C /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0741DD39BCB00733F9C /* SanFranciscoText-Medium.otf */; };
 		337EB0781DD39BCB00733F9C /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0751DD39BCB00733F9C /* SanFranciscoText-Regular.otf */; };
-		33B53F251DD0ECD500462C66 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		33B53F251DD0ECD500462C66 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		33BE59961E36CCB4000661F6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE59951E36CCB4000661F6 /* UserProfile.swift */; };
 		33BE59981E36CD07000661F6 /* ResponseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE59971E36CD07000661F6 /* ResponseErrors.swift */; };
 		33BE59B31E36CF34000661F6 /* MainSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33BE59B21E36CF34000661F6 /* MainSearch.storyboard */; };
@@ -31,7 +31,7 @@
 		71687C09201119DD00269A02 /* CoinDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71687C08201119DD00269A02 /* CoinDetailPresenter.swift */; };
 		71687C0B201119EE00269A02 /* CoinDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71687C0A201119EE00269A02 /* CoinDetailInteractor.swift */; };
 		71DF8D9020127C47004E634F /* CoinDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DF8D8F20127C47004E634F /* CoinDetail.storyboard */; };
-		71DF8D9420129B83004E634F /* coinDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DF8D9320129B83004E634F /* coinDetailCell.swift */; };
+		71DF8D9420129B83004E634F /* CoinDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DF8D9320129B83004E634F /* CoinDetailCell.swift */; };
 		71FC6037200AC69C00D49016 /* MainCoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC6035200AC69C00D49016 /* MainCoinsViewController.swift */; };
 		71FC6038200AC69C00D49016 /* mTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC6036200AC69C00D49016 /* mTableViewCell.swift */; };
 		71FC606B200AC76600D49016 /* MainSearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC605A200AC76600D49016 /* MainSearchContract.swift */; };
@@ -114,7 +114,7 @@
 		71687C08201119DD00269A02 /* CoinDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailPresenter.swift; sourceTree = "<group>"; };
 		71687C0A201119EE00269A02 /* CoinDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailInteractor.swift; sourceTree = "<group>"; };
 		71DF8D8F20127C47004E634F /* CoinDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoinDetail.storyboard; sourceTree = "<group>"; };
-		71DF8D9320129B83004E634F /* coinDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coinDetailCell.swift; sourceTree = "<group>"; };
+		71DF8D9320129B83004E634F /* CoinDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailCell.swift; sourceTree = "<group>"; };
 		71FC6035200AC69C00D49016 /* MainCoinsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoinsViewController.swift; sourceTree = "<group>"; };
 		71FC6036200AC69C00D49016 /* mTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mTableViewCell.swift; sourceTree = "<group>"; };
 		71FC605A200AC76600D49016 /* MainSearchContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchContract.swift; sourceTree = "<group>"; };
@@ -559,7 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				71687C02201119B300269A02 /* CoinDetailViewController.swift */,
-				71DF8D9320129B83004E634F /* coinDetailCell.swift */,
+				71DF8D9320129B83004E634F /* CoinDetailCell.swift */,
 				71DF8D8F20127C47004E634F /* CoinDetail.storyboard */,
 			);
 			name = View;
@@ -680,7 +680,7 @@
 				33CAF4D41DD75AF600465298 /* Localizable.strings in Resources */,
 				E1164E351EF35D3300B9B565 /* PlainButtonCell.xib in Resources */,
 				337EB0771DD39BCB00733F9C /* SanFranciscoText-Medium.otf in Resources */,
-				33B53F251DD0ECD500462C66 /* (null) in Resources */,
+				33B53F251DD0ECD500462C66 /* BuildFile in Resources */,
 				E1164E311EF35D2300B9B565 /* SectionHeaderLabelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +753,8 @@
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -769,6 +771,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -830,7 +834,7 @@
 				E1164E281EF35D0400B9B565 /* UIStoryboard.swift in Sources */,
 				71FC606F200AC76600D49016 /* MainSearchInteractor.swift in Sources */,
 				71FC6070200AC76600D49016 /* MainSearchRouter.swift in Sources */,
-				71DF8D9420129B83004E634F /* coinDetailCell.swift in Sources */,
+				71DF8D9420129B83004E634F /* CoinDetailCell.swift in Sources */,
 				E1164E291EF35D0400B9B565 /* UITableView.swift in Sources */,
 				33BE59961E36CCB4000661F6 /* UserProfile.swift in Sources */,
 				E1164E251EF35D0400B9B565 /* UIColor+Pallet.swift in Sources */,
@@ -1022,47 +1026,7 @@
 					"\"UIKit\"",
 					"-lstdc++",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"c++\"",
-					"-l\"z\"",
-					"-framework",
-					"\"Alamofire\"",
-					"-framework",
-					"\"AlamofireObjectMapper\"",
-					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
-					"\"Fabric\"",
-					"-framework",
-					"\"KeychainSwift\"",
-					"-framework",
-					"\"Localize_Swift\"",
-					"-framework",
-					"\"MBProgressHUD\"",
-					"-framework",
-					"\"NextResponderTextField\"",
-					"-framework",
-					"\"ObjectMapper\"",
-					"-framework",
-					"\"ObjectMapper_Realm\"",
-					"-framework",
-					"\"ReachabilitySwift\"",
-					"-framework",
-					"\"Realm\"",
-					"-framework",
-					"\"RealmSwift\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"UIColor_Hex_Swift\"",
-					"-framework",
-					"\"UIKit\"",
-					"-lstdc++",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC -l\"c++\" -l\"z\" -framework \"Alamofire\" -framework \"AlamofireObjectMapper\" -framework \"Crashlytics\" -framework \"Fabric\" -framework \"KeychainSwift\" -framework \"Localize_Swift\" -framework \"MBProgressHUD\" -framework \"NextResponderTextField\" -framework \"ObjectMapper\" -framework \"ObjectMapper_Realm\" -framework \"ReachabilitySwift\" -framework \"Realm\" -framework \"RealmSwift\" -framework \"Security\" -framework \"SystemConfiguration\" -framework \"UIColor_Hex_Swift\" -framework \"UIKit\" -lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = victor.CoinApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

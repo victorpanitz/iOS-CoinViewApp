@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Boilerplate/Modules/MainCoinsViewController.swift"
-            timestampString = "538090808.856722"
+            timestampString = "538199826.6504821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "MainSearchViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Boilerplate/Modules/MainCoinsViewController.swift"
-            timestampString = "538090808.857217"
+            timestampString = "538199826.65095"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "updateIndicator(state:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -185,28 +185,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Boilerplate/Modules/Router/MainSearchRouter.swift"
-            timestampString = "538090808.857464"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "showCoinDetail(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Boilerplate/Modules/CoinDetailPresenter.swift"
-            timestampString = "538090808.857515"
+            timestampString = "538173652.339361"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "updateView(coin:)"
             landmarkType = "7">
          </BreakpointContent>

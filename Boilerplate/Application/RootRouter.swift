@@ -15,8 +15,6 @@ class RootRouter: NSObject {
 
     private func presentMainSearchScreen() {
         let mainSearchViewController = MainSearchRouter.setupModule()
-//        let navigationCompanies = UINavigationController()
-//        navigationCompanies.viewControllers = [mainSearchViewController]
         presentView(mainSearchViewController)
     }
 

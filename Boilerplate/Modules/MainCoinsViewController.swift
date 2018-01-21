@@ -8,18 +8,24 @@
 
 import UIKit
 import Nuke
+import RxSwift
+import RxCocoa
 
 class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableViewDelegate, UITableViewDataSource {
   
     
     var manager = Nuke.Manager.shared
     var mCoins : [CoinAttributes] = []
+    var mShownCoins : [CoinAttributes] = []
+    //CRIAR DATA E SHOWN DATA PARA TER AS INFORMACOES APOS APAGAR O FILTRO
+    let disposeBag = DisposeBag()
     // MARK: Properties
     
     var presenter: MainSearchPresentation?
     
     // MARK: IBOutlets
     
+    @IBOutlet var mSearchBar: UISearchBar!
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mTableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -36,7 +42,20 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.red
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
+
+        mSearchBar
+            .rx.text // Observable property thanks to RxCocoa
+            .orEmpty // Make it non-optional
+            .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
+            .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
+            .subscribe(onNext: { [unowned self] query in // Here we subscribe to every new value
+                self.mShownCoins = self.mCoins.filter {  ($0.marketCurrencyLong!.hasPrefix(query))}
+                self.mShownCoins.sort { (first, next) -> Bool in
+                    return first.marketCurrencyLong!.compare(next.marketCurrencyLong!) == .orderedAscending
+                }
+                self.mTableView.reloadData() // And reload table view data.
+            })
+            .disposed(by: disposeBag)
         
         setupView()
         hideKeyboardWhenTappedAround()
@@ -54,25 +73,25 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mCoins.count
+        return mShownCoins.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mTableView.dequeueReusableCell(withIdentifier: "mCell", for: indexPath) as! mTableViewCell
-        cell.coinAttributes = self.mCoins[indexPath.row]
-            if(self.mCoins[indexPath.row].logoUrl != nil){
-                let url = URL(string: self.mCoins[indexPath.row].logoUrl!)
+        cell.coinAttributes = self.mShownCoins[indexPath.row]
+            if(self.mShownCoins[indexPath.row].logoUrl != nil){
+                let url = URL(string: self.mShownCoins[indexPath.row].logoUrl!)
                 cell.coinLogoImageView.image = nil
                 self.manager.loadImage(with: url!, into: cell.coinLogoImageView)
             }
-        cell.coinTitleLabel.text = mCoins[indexPath.row].marketCurrencyLong
-        cell.coinReferenceLabel.text = "Ref.: \(mCoins[indexPath.row].baseCurrencyLong!)"
+        cell.coinTitleLabel.text = "\(mShownCoins[indexPath.row].marketCurrencyLong!) (\(mShownCoins[indexPath.row].marketName!))"
+        cell.coinReferenceLabel.text = "Ref.: \(mShownCoins[indexPath.row].baseCurrencyLong!)"
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let coinAttribute: CoinAttributes = mCoins[indexPath.row] {
+        if let coinAttribute: CoinAttributes = mShownCoins[indexPath.row] {
             presenter?.showCoinDetail(coinAttribute)
         }
     }
@@ -118,7 +137,8 @@ extension  MainSearchViewController: MainSearchView {
     
     func updateCoinTable(mCoins: [CoinAttributes]) {
         self.mCoins = mCoins
-        self.mCoins.sort { (first, next) -> Bool in
+        self.mShownCoins = self.mCoins
+        self.mShownCoins.sort { (first, next) -> Bool in
             return first.marketCurrencyLong!.compare(next.marketCurrencyLong!) == .orderedAscending
         }
         
