@@ -18,24 +18,24 @@ class CoinAttributes: Object, Mappable {
     @objc dynamic var baseCurrency: String?
     @objc dynamic var marketCurrencyLong: String?
     @objc dynamic var baseCurrencyLong: String?
-    @objc dynamic var minTradeSize = 0
+    @objc dynamic var minTradeSize:  Double = 0
     @objc dynamic var marketName: String?
     @objc dynamic var isActive = 0
     @objc dynamic var created: Date?
     @objc dynamic var notice: String?
     @objc dynamic var isSponsored = 0
     @objc dynamic var logoUrl: String?
-    @objc dynamic var high = 0
-    @objc dynamic var low = 0
+    @objc dynamic var high: Double = 0
+    @objc dynamic var low: Double = 0
     @objc dynamic var volume = 0
-    @objc dynamic var last = 0
+    @objc dynamic var last: Double = 0
     @objc dynamic var baseVolume = 0
     @objc dynamic var timeStamp: Date?
-    @objc dynamic var bid = 0
-    @objc dynamic var ask = 0
+    @objc dynamic var bid: Double = 0
+    @objc dynamic var ask: Double = 0
     @objc dynamic var openBuyOrders = 0
     @objc dynamic var openSellOrders = 0
-    @objc dynamic var prevDay = 0
+    @objc dynamic var prevDay: Double = 0
     
     
     

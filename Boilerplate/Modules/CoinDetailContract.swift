@@ -11,7 +11,6 @@ import Foundation
 protocol CoinDetailView: BaseView {
     func updateCoinTable(mCoins: CoinAttributes)
     func updateView(coin: CoinAttributes)
-    func updateIndicator(state: Bool)
 }
 
 protocol CoinDetailPresentation: class {

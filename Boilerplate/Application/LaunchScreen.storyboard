@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="SanFranciscoText-Regular.otf">
-            <string>SanFranciscoText-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -26,40 +23,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample VIPER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E2-uU-APg">
-                                <rect key="frame" x="26" y="286" width="323" height="95"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO.001" translatesAutoresizingMaskIntoConstraints="NO" id="68B-05-yav">
+                                <rect key="frame" x="16" y="203" width="343" height="261"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="tC4-20-55l"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="viper" translatesAutoresizingMaskIntoConstraints="NO" id="68B-05-yav">
-                                <rect key="frame" x="112" y="153" width="150" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="QYC-0v-S9c"/>
-                                    <constraint firstAttribute="height" constant="100" id="c0h-uF-SUs"/>
+                                    <constraint firstAttribute="width" secondItem="68B-05-yav" secondAttribute="height" multiplier="343:261" id="AdB-zF-elr"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.31680390238761902" green="0.10042683035135269" blue="0.55341655015945435" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="7E2-uU-APg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0P1-xh-m2C"/>
-                            <constraint firstItem="7E2-uU-APg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9U0-0v-MxK"/>
-                            <constraint firstItem="7E2-uU-APg" firstAttribute="top" secondItem="68B-05-yav" secondAttribute="bottom" constant="33" id="H3g-qs-cla"/>
-                            <constraint firstItem="7E2-uU-APg" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="10" id="PAD-gE-EsN"/>
-                            <constraint firstItem="68B-05-yav" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zjx-jV-s8a"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7E2-uU-APg" secondAttribute="trailing" constant="10" id="wNt-qQ-ZZ8"/>
+                            <constraint firstItem="68B-05-yav" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YSg-pf-3FY"/>
+                            <constraint firstItem="68B-05-yav" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="ZiN-k4-qQ8"/>
+                            <constraint firstItem="68B-05-yav" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="iNz-e4-k9b"/>
+                            <constraint firstItem="68B-05-yav" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="v0r-6U-Da3"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="-194.40000000000001" y="388.15592203898052"/>
         </scene>
     </scenes>
     <resources>
-        <image name="viper" width="512" height="512"/>
+        <image name="LOGO.001" width="1024" height="768"/>
     </resources>
 </document>

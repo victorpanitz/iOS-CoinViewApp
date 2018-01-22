@@ -29,11 +29,9 @@ extension CoinDetailPresenter: CoinDetailPresentation {
     }
     
     func retrieveCoins(marketName: String) {
-        view?.updateIndicator(state: true)
-        // interactor?.retrieveCoins(marketName: <#String#>)
+        view?.showLoading()
+        interactor?.retrieveCoins(marketName: marketName)
     }
-    
-    
     
     
     func doSomething() {
@@ -48,13 +46,14 @@ extension CoinDetailPresenter: CoinDetailPresentation {
 
 extension CoinDetailPresenter: CoinDetailInteractorOutput {
     func onFetchCoins(mCoins: [CoinAttributes], error: String?) {
-        view?.updateIndicator(state: false)
-        //view?.updateCoinTable(mCoins: mCoins)
+        view?.hideLoading()
+        let parsedCoin = mCoins[0]
+        view?.updateCoinTable(mCoins: parsedCoin)
+
     }
     
     
     func onFetchProductsFailure(message: String) {
-        view?.updateIndicator(state: false)
         view?.showError(message)
     }
     

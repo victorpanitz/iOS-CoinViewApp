@@ -10,12 +10,9 @@
 import Foundation
 import UIKit
 
-class coinDetailCell : UITableViewCell{
-    
-    var coinAttributes: CoinAttributes?
-    
-    @IBOutlet weak var coinTitleLabel: UILabel!
-    @IBOutlet weak var coinReferenceLabel: UILabel!
-    @IBOutlet weak var coinLogoImageView: UIImageView!
+class CoinDetailCell : UITableViewCell{
+        
+    @IBOutlet weak var coinDetailTitle: UILabel!
+    @IBOutlet var coinDetailDescription: UILabel!
     
 }

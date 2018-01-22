@@ -16,17 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        setupNavigationBarFont()
-        setupBackButtonAppearance()
-        presentInitialScreen()
-        return true
+        DispatchQueue.main.async {
+            Thread.sleep(forTimeInterval: 3.0)
+
+        }
+            
+        self.setupNavigationBarFont()
+        self.setupBackButtonAppearance()
+        self.presentInitialScreen()
+        
+       return true
     }
     
     // MARK: Private Methods
     
     func presentInitialScreen() {
         let rootRouter = RootRouter()
-        rootRouter.presentFirstScreen(inWindow: window!)
+        rootRouter.presentFirstScreen()
     }
     
     fileprivate func setupNavigationBarFont() {
