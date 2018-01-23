@@ -25,7 +25,7 @@ extension MainSearchPresenter: MainSearchPresentation {
     }
     
     func retrieveCoins() {
-        view?.updateIndicator(state: true)
+        view?.showLoading()
         interactor?.retrieveCoins()
     }
     
@@ -40,13 +40,13 @@ extension MainSearchPresenter: MainSearchPresentation {
 
 extension MainSearchPresenter: MainSearchInteractorOutput {
     func onFetchCoins(mCoins: [CoinAttributes], error: String?) {
-        view?.updateIndicator(state: false)
+        view?.hideLoading()
         view?.updateCoinTable(mCoins: mCoins)
     }
     
     
     func onFetchProductsFailure(message: String) {
-        view?.updateIndicator(state: false)
+        view?.hideLoading()
         view?.showError(message)
     }
     

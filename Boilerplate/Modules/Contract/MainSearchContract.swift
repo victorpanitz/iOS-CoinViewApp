@@ -11,7 +11,6 @@ import Foundation
 
 protocol MainSearchView: BaseView {
     func updateCoinTable(mCoins: [CoinAttributes])
-    func updateIndicator(state: Bool)
 }
 
 protocol MainSearchPresentation: class {

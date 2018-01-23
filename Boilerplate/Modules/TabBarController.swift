@@ -15,34 +15,21 @@ class TabBarController: UITabBarController, StoryboardLoadable  {
     
     var manager = Nuke.Manager.shared
     
-    //CRIAR DATA E SHOWN DATA PARA TER AS INFORMACOES APOS APAGAR O FILTRO
-
     // MARK: Properties
     
     var presenter: TabBarPresentation?
     @IBOutlet weak var scrollView: UIScrollView!
 
-    // MARK: IBOutlets
-    
-    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor.red
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.tabBar.tintColor = UIColor.black
         hideKeyboardWhenTappedAround()
         //presenter?.retrieveCoins()
     }
-    
-    
-    // MARK: IBActions
-    
-
-    
-    // MARK: Private
     
     
 }

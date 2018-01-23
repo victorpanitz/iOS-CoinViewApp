@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,6 +29,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-bU-vUR">
                                 <rect key="frame" x="0.0" y="100" width="320" height="468"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.33480685949325562" green="0.75683730840682983" blue="0.99831587076187134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="QoB-dt-VeK">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,6 +92,16 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Coin View" id="CRi-Fp-38S">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="I5X-Io-UYf">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O3d-be-W1E">
+                                                <rect key="frame" x="16" y="4" width="85" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="8"/>
+                                                <state key="normal" title="Powered By Bittrex">
+                                                    <color key="titleColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="refresh" id="njB-Ii-lrc">
                                             <connections>
                                                 <action selector="refreshCoins:" destination="cdn-Gn-q5D" id="l19-5u-j6u"/>
@@ -100,14 +110,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="896-DI-maA">
-                                <rect key="frame" x="16" y="32" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="3tX-rq-i2o"/>
-                                    <constraint firstAttribute="width" secondItem="896-DI-maA" secondAttribute="height" multiplier="1:1" id="Plq-pl-z50"/>
-                                    <constraint firstAttribute="height" constant="20" id="TYp-Fz-UDh"/>
-                                </constraints>
-                            </activityIndicatorView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="84H-ss-gfV">
                                 <rect key="frame" x="16" y="72" width="288" height="29"/>
                                 <segments>
@@ -124,7 +126,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="7cQ-bY-zyg"/>
-                            <constraint firstItem="896-DI-maA" firstAttribute="top" secondItem="W6v-ap-3sT" secondAttribute="top" constant="12" id="Djd-i6-l8H"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="bottom" secondItem="W6v-ap-3sT" secondAttribute="bottom" id="ISJ-8P-Hcy"/>
                             <constraint firstItem="e0o-kO-cAX" firstAttribute="bottom" secondItem="W6v-ap-3sT" secondAttribute="bottom" id="NBP-97-CFf"/>
                             <constraint firstItem="84H-ss-gfV" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" constant="16" id="QKA-ZB-9Mr"/>
@@ -132,7 +133,6 @@
                             <constraint firstItem="e0o-kO-cAX" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="Ych-mb-1cQ"/>
                             <constraint firstItem="84H-ss-gfV" firstAttribute="top" secondItem="03V-nP-By6" secondAttribute="bottom" constant="8" id="atY-VV-cLa"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="84H-ss-gfV" secondAttribute="bottom" id="cf6-je-tdd"/>
-                            <constraint firstItem="896-DI-maA" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" constant="16" id="hHI-JS-Z9n"/>
                             <constraint firstItem="03V-nP-By6" firstAttribute="top" secondItem="W6v-ap-3sT" secondAttribute="top" id="jlz-7f-nEn"/>
                             <constraint firstItem="e0o-kO-cAX" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="myI-en-QaK"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="tSH-CU-FV4"/>
@@ -145,7 +145,6 @@
                     <connections>
                         <outlet property="mSearchBar" destination="QoB-dt-VeK" id="T7c-BN-2Mu"/>
                         <outlet property="mTableView" destination="vbh-bU-vUR" id="Dd8-9W-99c"/>
-                        <outlet property="progressIndicator" destination="896-DI-maA" id="Tkg-sa-bPY"/>
                         <outlet property="sectionReferenceFilter" destination="84H-ss-gfV" id="4Ry-Ao-3FG"/>
                     </connections>
                 </viewController>

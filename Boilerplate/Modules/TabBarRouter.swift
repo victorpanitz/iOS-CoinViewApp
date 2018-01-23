@@ -44,25 +44,25 @@ extension TabBarRouter: TabBarWireframe {
 
     static func setNavigation() -> [UIViewController] {
         
-        let defaults = UserDefaults.standard
+       // let defaults = UserDefaults.standard
         
         let coinList = MainSearchRouter.setupModule()
-        
         let navigationCoinList = UINavigationController()
         navigationCoinList.navigationBar.isHidden = true
         navigationCoinList.viewControllers = [coinList]
         let navigationCoinListTabBarItem = UITabBarItem(title: "Coins List", image: UIImage(named: "CoinsTabBar-29x29-1"), selectedImage: UIImage(named: "CoinsTabBar-29x29-1"))
         navigationCoinList.tabBarItem = navigationCoinListTabBarItem
         
-//        let orders =  OrdersRouter.setupModule()
-//        let navigationOrders = UINavigationController()
-//        navigationOrders.viewControllers = [orders]
-//        let navigationOrdersTabBarItem = UITabBarItem(title: nil, image: UIImage(named: "icCart"), selectedImage: UIImage(named: "icCartActive"))
-//        navigationOrders.tabBarItem = navigationOrdersTabBarItem
-
+        
+        let newsList = NewsListRouter.setupModule()
+        let navigationNewsList = UINavigationController()
+        navigationNewsList.navigationBar.isHidden = true
+        navigationNewsList.viewControllers = [newsList]
+        var navigationNewsListTabBarItem = UITabBarItem(title: "Last News", image: UIImage(named: "News-29x29-1"), selectedImage: UIImage(named: "News-29x29-1"))
+        navigationNewsList.tabBarItem = navigationNewsListTabBarItem
 
         
-        return [navigationCoinList]
+        return [navigationCoinList, navigationNewsList]
     }
     
 }

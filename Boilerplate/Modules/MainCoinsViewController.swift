@@ -29,7 +29,6 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
     
     @IBOutlet var sectionReferenceFilter: UISegmentedControl!
     @IBOutlet var mSearchBar: UISearchBar!
-    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
     @IBOutlet weak var mTableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -162,27 +161,16 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
 }
 
 extension  MainSearchViewController: MainSearchView {
-    func updateIndicator(state: Bool) {
-        if state {
-            self.progressIndicator.isHidden = false
-            self.progressIndicator.startAnimating()
-        }else{
-            self.progressIndicator.isHidden = true
-            self.progressIndicator.stopAnimating()
-        }
-    }
+    
     
     func updateCoinTable(mCoins: [CoinAttributes]) {
         self.mCoins = mCoins
         self.mCoinReferenced = self.mCoins
         self.mShownCoins = self.mCoins
         setupReference()
-    
     }
     
-    
     //TODO: Implement MainSearchView methods here
-    
     
 }
 
