@@ -16,7 +16,7 @@
 		337EB0761DD39BCB00733F9C /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0731DD39BCB00733F9C /* SanFranciscoText-Light.otf */; };
 		337EB0771DD39BCB00733F9C /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0741DD39BCB00733F9C /* SanFranciscoText-Medium.otf */; };
 		337EB0781DD39BCB00733F9C /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0751DD39BCB00733F9C /* SanFranciscoText-Regular.otf */; };
-		33B53F251DD0ECD500462C66 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		33B53F251DD0ECD500462C66 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		33BE59961E36CCB4000661F6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE59951E36CCB4000661F6 /* UserProfile.swift */; };
 		33BE59981E36CD07000661F6 /* ResponseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE59971E36CD07000661F6 /* ResponseErrors.swift */; };
 		33CAF4D41DD75AF600465298 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33CAF4D61DD75AF600465298 /* Localizable.strings */; };
@@ -34,6 +34,12 @@
 		71687C07201119D000269A02 /* CoinDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71687C06201119D000269A02 /* CoinDetailContract.swift */; };
 		71687C09201119DD00269A02 /* CoinDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71687C08201119DD00269A02 /* CoinDetailPresenter.swift */; };
 		71687C0B201119EE00269A02 /* CoinDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71687C0A201119EE00269A02 /* CoinDetailInteractor.swift */; };
+		71BE32A5201788BC0009B26D /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE32A4201788BC0009B26D /* NewsDetailViewController.swift */; };
+		71BE32A7201788CE0009B26D /* NewsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE32A6201788CE0009B26D /* NewsDetailPresenter.swift */; };
+		71BE32A9201788E40009B26D /* NewsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE32A8201788E40009B26D /* NewsDetailInteractor.swift */; };
+		71BE32AB201788ED0009B26D /* NewsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE32AA201788ED0009B26D /* NewsDetailRouter.swift */; };
+		71BE32AD201788FB0009B26D /* NewsDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BE32AC201788FB0009B26D /* NewsDetailContract.swift */; };
+		71BE32AF2017B24E0009B26D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71BE32AE2017B24E0009B26D /* GoogleService-Info.plist */; };
 		71DF8D9020127C47004E634F /* CoinDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DF8D8F20127C47004E634F /* CoinDetail.storyboard */; };
 		71DF8D9420129B83004E634F /* CoinDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DF8D9320129B83004E634F /* CoinDetailCell.swift */; };
 		71E370CE20165D4A002859BF /* NewsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71E370CD20165D4A002859BF /* NewsList.storyboard */; };
@@ -133,6 +139,12 @@
 		71687C06201119D000269A02 /* CoinDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailContract.swift; sourceTree = "<group>"; };
 		71687C08201119DD00269A02 /* CoinDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailPresenter.swift; sourceTree = "<group>"; };
 		71687C0A201119EE00269A02 /* CoinDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailInteractor.swift; sourceTree = "<group>"; };
+		71BE32A4201788BC0009B26D /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		71BE32A6201788CE0009B26D /* NewsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailPresenter.swift; sourceTree = "<group>"; };
+		71BE32A8201788E40009B26D /* NewsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailInteractor.swift; sourceTree = "<group>"; };
+		71BE32AA201788ED0009B26D /* NewsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailRouter.swift; sourceTree = "<group>"; };
+		71BE32AC201788FB0009B26D /* NewsDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailContract.swift; sourceTree = "<group>"; };
+		71BE32AE2017B24E0009B26D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71DF8D8F20127C47004E634F /* CoinDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoinDetail.storyboard; sourceTree = "<group>"; };
 		71DF8D9320129B83004E634F /* CoinDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailCell.swift; sourceTree = "<group>"; };
 		71E370CD20165D4A002859BF /* NewsList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsList.storyboard; sourceTree = "<group>"; };
@@ -427,6 +439,7 @@
 				3322884F1DD2633B001042CE /* Assets */,
 				33B53F5B1DD0FD9500462C66 /* Application */,
 				33B53F2B1DD0ECD500462C66 /* Info.plist */,
+				71BE32AE2017B24E0009B26D /* GoogleService-Info.plist */,
 			);
 			path = Boilerplate;
 			sourceTree = "<group>";
@@ -502,11 +515,12 @@
 		33E031C5C8BB899C8D6BE189 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				71BE329E2017885C0009B26D /* NewsDetail */,
 				715787D820165BAB00DE5355 /* NewsList */,
-				71F5C0DB20160DA400D0C977 /* TabBar */,
-				3322887B1DD28241001042CE /* Base */,
 				33BE59931E36CB00000661F6 /* CoinList */,
 				71D43B0C200BEDB700841D89 /* CoinDetail */,
+				71F5C0DB20160DA400D0C977 /* TabBar */,
+				3322887B1DD28241001042CE /* Base */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -547,6 +561,58 @@
 				71E370C820165CE7002859BF /* Contract */,
 			);
 			name = NewsList;
+			sourceTree = "<group>";
+		};
+		71BE329E2017885C0009B26D /* NewsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				71BE32A3201788780009B26D /* View */,
+				71BE32A2201788750009B26D /* Presenter */,
+				71BE32A1201788720009B26D /* Interactor */,
+				71BE32A02017886F0009B26D /* Router */,
+				71BE329F2017886C0009B26D /* Contracts */,
+			);
+			name = NewsDetail;
+			sourceTree = "<group>";
+		};
+		71BE329F2017886C0009B26D /* Contracts */ = {
+			isa = PBXGroup;
+			children = (
+				71BE32AC201788FB0009B26D /* NewsDetailContract.swift */,
+			);
+			name = Contracts;
+			sourceTree = "<group>";
+		};
+		71BE32A02017886F0009B26D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				71BE32AA201788ED0009B26D /* NewsDetailRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		71BE32A1201788720009B26D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				71BE32A8201788E40009B26D /* NewsDetailInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		71BE32A2201788750009B26D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				71BE32A6201788CE0009B26D /* NewsDetailPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		71BE32A3201788780009B26D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71BE32A4201788BC0009B26D /* NewsDetailViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		71D43B0C200BEDB700841D89 /* CoinDetail */ = {
@@ -833,8 +899,9 @@
 				71E370CE20165D4A002859BF /* NewsList.storyboard in Resources */,
 				33CAF4D41DD75AF600465298 /* Localizable.strings in Resources */,
 				E1164E351EF35D3300B9B565 /* PlainButtonCell.xib in Resources */,
+				71BE32AF2017B24E0009B26D /* GoogleService-Info.plist in Resources */,
 				337EB0771DD39BCB00733F9C /* SanFranciscoText-Medium.otf in Resources */,
-				33B53F251DD0ECD500462C66 /* (null) in Resources */,
+				33B53F251DD0ECD500462C66 /* BuildFile in Resources */,
 				E1164E311EF35D2300B9B565 /* SectionHeaderLabelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -897,6 +964,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Boilerplate/Pods-Boilerplate-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -910,11 +978,14 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -928,6 +999,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -943,6 +1016,8 @@
 			files = (
 				3322888F1DD283CF001042CE /* BaseViewController.swift in Sources */,
 				E1164E451EF35D5E00B9B565 /* PlainButtonCellDelegate.swift in Sources */,
+				71BE32A9201788E40009B26D /* NewsDetailInteractor.swift in Sources */,
+				71BE32A7201788CE0009B26D /* NewsDetailPresenter.swift in Sources */,
 				E1164E201EF35D0400B9B565 /* Results.swift in Sources */,
 				332288811DD282D5001042CE /* BaseContract.swift in Sources */,
 				E1164E471EF35D6800B9B565 /* ProfileApiDataManager.swift in Sources */,
@@ -950,6 +1025,7 @@
 				71FC606B200AC76600D49016 /* MainSearchContract.swift in Sources */,
 				71E370DC20167799002859BF /* NewsListInteractor.swift in Sources */,
 				332F1C891DD33A790080B38D /* RootRouter.swift in Sources */,
+				71BE32AB201788ED0009B26D /* NewsDetailRouter.swift in Sources */,
 				71E370DA2016778C002859BF /* NewsListPresenter.swift in Sources */,
 				E1164E3B1EF35D4D00B9B565 /* ValidatorHelper.swift in Sources */,
 				E1164E261EF35D0400B9B565 /* UIFont+Utils.swift in Sources */,
@@ -975,6 +1051,7 @@
 				71687C0B201119EE00269A02 /* CoinDetailInteractor.swift in Sources */,
 				E1164E431EF35D5700B9B565 /* ValidableUILabel.swift in Sources */,
 				715787D3201616D100DE5355 /* TabBarInteractor.swift in Sources */,
+				71BE32AD201788FB0009B26D /* NewsDetailContract.swift in Sources */,
 				71FC6037200AC69C00D49016 /* MainCoinsViewController.swift in Sources */,
 				71687C03201119B300269A02 /* CoinDetailViewController.swift in Sources */,
 				71E370D4201672A1002859BF /* Source.swift in Sources */,
@@ -993,6 +1070,7 @@
 				332F1C871DD33A790080B38D /* AppDelegate.swift in Sources */,
 				E1164E231EF35D0400B9B565 /* UICollectionView.swift in Sources */,
 				71FC6078200AC82000D49016 /* CoinAttributes.swift in Sources */,
+				71BE32A5201788BC0009B26D /* NewsDetailViewController.swift in Sources */,
 				33BE59981E36CD07000661F6 /* ResponseErrors.swift in Sources */,
 				E1164E401EF35D5700B9B565 /* RoundedPinkButton.swift in Sources */,
 				E1164E341EF35D3300B9B565 /* PlainButtonCell.swift in Sources */,
@@ -1194,47 +1272,7 @@
 					"\"UIKit\"",
 					"-lstdc++",
 				);
-				"OTHER_LDFLAGS[arch=*]" = (
-					"$(inherited)",
-					"-ObjC",
-					"-l\"c++\"",
-					"-l\"z\"",
-					"-framework",
-					"\"Alamofire\"",
-					"-framework",
-					"\"AlamofireObjectMapper\"",
-					"-framework",
-					"\"Crashlytics\"",
-					"-framework",
-					"\"Fabric\"",
-					"-framework",
-					"\"KeychainSwift\"",
-					"-framework",
-					"\"Localize_Swift\"",
-					"-framework",
-					"\"MBProgressHUD\"",
-					"-framework",
-					"\"NextResponderTextField\"",
-					"-framework",
-					"\"ObjectMapper\"",
-					"-framework",
-					"\"ObjectMapper_Realm\"",
-					"-framework",
-					"\"ReachabilitySwift\"",
-					"-framework",
-					"\"Realm\"",
-					"-framework",
-					"\"RealmSwift\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"UIColor_Hex_Swift\"",
-					"-framework",
-					"\"UIKit\"",
-					"-lstdc++",
-				);
+				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC -l\"c++\" -l\"z\" -framework \"Alamofire\" -framework \"AlamofireObjectMapper\" -framework \"Crashlytics\" -framework \"Fabric\" -framework \"KeychainSwift\" -framework \"Localize_Swift\" -framework \"MBProgressHUD\" -framework \"NextResponderTextField\" -framework \"ObjectMapper\" -framework \"ObjectMapper_Realm\" -framework \"ReachabilitySwift\" -framework \"Realm\" -framework \"RealmSwift\" -framework \"Security\" -framework \"SystemConfiguration\" -framework \"UIColor_Hex_Swift\" -framework \"UIKit\" -lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = victor.CoinApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

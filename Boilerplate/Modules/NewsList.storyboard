@@ -29,7 +29,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjx-CK-Y8Z">
                                 <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" red="0.33480685949325562" green="0.75683730840682983" blue="0.99831587076187134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="wH4-Wg-7Hv">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -144,6 +144,7 @@
                         <viewLayoutGuide key="safeArea" id="76u-Zp-fZW"/>
                     </view>
                     <connections>
+                        <outlet property="mSearchBar" destination="wH4-Wg-7Hv" id="R7R-MI-4e5"/>
                         <outlet property="mTableView" destination="qjx-CK-Y8Z" id="79w-rZ-UFR"/>
                     </connections>
                 </viewController>

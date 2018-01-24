@@ -45,6 +45,7 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
         self.navigationController?.navigationBar.barTintColor = UIColor.red
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
+        mSearchBar.placeholder = "Filter"
         mSearchBar
             .rx.text // Observable property thanks to RxCocoa
             .orEmpty // Make it non-optional
@@ -93,9 +94,12 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
            cell.coinLogoImageView.image = #imageLiteral(resourceName: "Icon-App-76x76-1")
         }
         cell.coinTitleLabel.text = "\(mShownCoins[indexPath.row].marketCurrencyLong!) (\(mShownCoins[indexPath.row].marketName!))"
-        cell.coinReferenceLabel.text = "Ref.: \(mShownCoins[indexPath.row].baseCurrencyLong!)"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 56
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -106,10 +110,9 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
     
     // MARK: IBActions
     
-    @IBAction func refreshCoins(_ sender: Any) {
-        presenter?.retrieveCoins()
-    }
+    
     @IBAction func sectionReferenceChanged(_ sender: UISegmentedControl) {
+        mSearchBar.text = ""
         setupReference()
     }
     
@@ -142,10 +145,10 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
             break
         }
         
-        DispatchQueue.main.async() {
             self.mTableView.reloadData()
+            //self.mTableView.scrollsToTop = true
             self.mTableView.tableFooterView = UIView(frame: .zero)
-        }
+        
     }
     
     

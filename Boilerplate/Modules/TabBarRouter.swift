@@ -62,7 +62,7 @@ extension TabBarRouter: TabBarWireframe {
         navigationNewsList.tabBarItem = navigationNewsListTabBarItem
 
         
-        return [navigationCoinList, navigationNewsList]
+        return [navigationNewsList,navigationCoinList]
     }
     
 }

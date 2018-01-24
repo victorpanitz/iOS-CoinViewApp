@@ -3,7 +3,9 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'Boilerplate' do
-  pod 'MBProgressHUD', '~> 1.0.0'
+pod 'Firebase/Database'	
+pod 'Firebase/Core'  
+pod 'MBProgressHUD', '~> 1.0.0'
   pod 'UIColor_Hex_Swift', '~> 3.0.1'
   pod 'NextResponderTextField'
   pod 'Localize-Swift', '~> 1.6'

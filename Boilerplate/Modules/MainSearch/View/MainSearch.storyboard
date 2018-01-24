@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +31,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-bU-vUR">
                                 <rect key="frame" x="0.0" y="100" width="320" height="468"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" red="0.33480685949325562" green="0.75683730840682983" blue="0.99831587076187134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="QoB-dt-VeK">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,47 +41,38 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mCell" rowHeight="72" id="n7T-9h-90w" customClass="mTableViewCell" customModule="Boilerplate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="84" width="320" height="72"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mCell" rowHeight="56" id="n7T-9h-90w" customClass="mTableViewCell" customModule="Boilerplate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="320" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n7T-9h-90w" id="Rsg-wh-g8n">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="71.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-Dw-31Q">
-                                                    <rect key="frame" x="16" y="8" width="50" height="50"/>
+                                                    <rect key="frame" x="15" y="8" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="PiN-Uk-BaH"/>
-                                                        <constraint firstAttribute="width" constant="50" id="gDL-fi-w5a"/>
+                                                        <constraint firstAttribute="height" constant="40" id="FRD-p0-fuF"/>
+                                                        <constraint firstAttribute="width" constant="40" id="VqP-AO-9sB"/>
+                                                        <constraint firstAttribute="width" secondItem="2Ig-Dw-31Q" secondAttribute="height" multiplier="1:1" id="bw0-kT-Xkk"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEv-Hm-OXu">
-                                                    <rect key="frame" x="74" y="22" width="213" height="24"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ref.: USDT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usb-xv-I46">
-                                                    <rect key="frame" x="74" y="44" width="49" height="14"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEv-Hm-OXu">
+                                                    <rect key="frame" x="63" y="18" width="216" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="EEv-Hm-OXu" firstAttribute="leading" secondItem="2Ig-Dw-31Q" secondAttribute="trailing" constant="8" id="Q8J-pm-h1K"/>
-                                                <constraint firstItem="2Ig-Dw-31Q" firstAttribute="top" secondItem="Rsg-wh-g8n" secondAttribute="top" constant="8" id="beg-xK-t3t"/>
-                                                <constraint firstItem="2Ig-Dw-31Q" firstAttribute="centerY" secondItem="Rsg-wh-g8n" secondAttribute="centerY" id="cfU-dh-on1"/>
-                                                <constraint firstAttribute="bottom" secondItem="2Ig-Dw-31Q" secondAttribute="bottom" constant="8" id="fyX-Si-dEY"/>
-                                                <constraint firstItem="EEv-Hm-OXu" firstAttribute="centerY" secondItem="Rsg-wh-g8n" secondAttribute="centerY" id="hI3-Gd-eZL"/>
-                                                <constraint firstItem="2Ig-Dw-31Q" firstAttribute="leading" secondItem="Rsg-wh-g8n" secondAttribute="leading" constant="16" id="wXd-FB-02q"/>
-                                                <constraint firstItem="Usb-xv-I46" firstAttribute="leading" secondItem="2Ig-Dw-31Q" secondAttribute="trailing" constant="8" id="yGC-lI-Ajr"/>
-                                                <constraint firstItem="Usb-xv-I46" firstAttribute="bottom" secondItem="2Ig-Dw-31Q" secondAttribute="bottom" id="zmJ-pB-nHF"/>
+                                                <constraint firstItem="EEv-Hm-OXu" firstAttribute="leading" secondItem="2Ig-Dw-31Q" secondAttribute="trailing" constant="8" id="DB4-6o-5BA"/>
+                                                <constraint firstItem="2Ig-Dw-31Q" firstAttribute="leading" secondItem="Rsg-wh-g8n" secondAttribute="leadingMargin" id="Vi1-In-zH7"/>
+                                                <constraint firstItem="2Ig-Dw-31Q" firstAttribute="centerY" secondItem="Rsg-wh-g8n" secondAttribute="centerY" id="bY1-Mw-VhJ"/>
+                                                <constraint firstItem="EEv-Hm-OXu" firstAttribute="trailing" secondItem="Rsg-wh-g8n" secondAttribute="trailingMargin" id="f2r-BF-7yi"/>
+                                                <constraint firstItem="EEv-Hm-OXu" firstAttribute="centerY" secondItem="2Ig-Dw-31Q" secondAttribute="centerY" id="w3E-mZ-kja"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="coinLogoImageView" destination="2Ig-Dw-31Q" id="Jbe-7r-DFv"/>
-                                            <outlet property="coinReferenceLabel" destination="Usb-xv-I46" id="VMl-KR-dy5"/>
                                             <outlet property="coinTitleLabel" destination="EEv-Hm-OXu" id="lNZ-A3-mom"/>
                                         </connections>
                                     </tableViewCell>
@@ -92,20 +85,15 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Coin View" id="CRi-Fp-38S">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="I5X-Io-UYf">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O3d-be-W1E">
-                                                <rect key="frame" x="16" y="4" width="85" height="36"/>
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="plain" id="I5X-Io-UYf">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O3d-be-W1E">
+                                                <rect key="frame" x="219" y="4" width="85" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="8"/>
                                                 <state key="normal" title="Powered By Bittrex">
                                                     <color key="titleColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="refresh" id="njB-Ii-lrc">
-                                            <connections>
-                                                <action selector="refreshCoins:" destination="cdn-Gn-q5D" id="l19-5u-j6u"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>

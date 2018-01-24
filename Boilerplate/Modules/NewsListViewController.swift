@@ -1,4 +1,4 @@
-//
+    //
 //  NewsListPresenter.swift
 //  Boilerplate
 //
@@ -10,12 +10,19 @@ import UIKit
 import Nuke
 import RxSwift
 import RxCocoa
+import FirebaseDatabase
+import Firebase
+import ObjectMapper
+
 
 class NewsListViewController: BaseViewController, StoryboardLoadable, UITableViewDelegate, UITableViewDataSource {
     
     var manager = Nuke.Manager.shared
     var mArticles: [Articles] = []
+    var shownArticles: [Articles] = []
+
     let disposeBag = DisposeBag()
+    var ref: DatabaseReference!
     
     // MARK: Properties
     
@@ -23,10 +30,13 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
     
     // MARK: Lifecycle
     @IBOutlet var mTableView: UITableView!
+    @IBOutlet var mSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.showLoading()
+        FirebaseApp.configure()
+        self.ref =  Database.database().reference().root
         self.mTableView.delegate = self
         self.mTableView.dataSource = self
         self.mTableView.allowsMultipleSelection = false
@@ -35,35 +45,39 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
         self.navigationController?.navigationBar.barTintColor = UIColor.red
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-//        mSearchBar
-//            .rx.text // Observable property thanks to RxCocoa
-//            .orEmpty // Make it non-optional
-//            .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
-//            .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
-//            .subscribe(onNext: { [unowned self] query in // Here we subscribe to every new value
-//                self.mShownCoins = self.mCoinReferenced.filter {  ($0.marketCurrencyLong!.hasPrefix(query))}
-//                self.mShownCoins.sort { (first, next) -> Bool in
-//                    return first.marketCurrencyLong!.compare(next.marketCurrencyLong!) == .orderedAscending
-//                }
-//                self.mTableView.reloadData() // And reload table view data.
-//            })
-//            .disposed(by: disposeBag)
         
+        mSearchBar.placeholder = "Filter"
+        mSearchBar
+            .rx.text // Observable property thanks to RxCocoa
+            .orEmpty // Make it non-optional
+            .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
+            .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
+            .subscribe(onNext: { [unowned self] query in // Here we subscribe to every new value
+                self.shownArticles = self.mArticles.filter {  ($0.description!.localizedCaseInsensitiveContains(query))}
+                if query.count <= 0 {
+                    self.shownArticles = self.mArticles
+                }
+                self.mTableView.reloadData() // And reload table view data.
+            })
+            .disposed(by: disposeBag)
+        
+        //presenter?.fetchNews()
+        setDatabaseObservables()
         hideKeyboardWhenTappedAround()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mArticles.count
+        return self.shownArticles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mTableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableCell
-        cell.newsAuthorLabel.text = self.mArticles[indexPath.row].author
-        cell.newsTitleLabel.text = self.mArticles[indexPath.row].title
-        cell.newsDescriptionLabel.text = self.mArticles[indexPath.row].description
-        if(self.mArticles[indexPath.row].urlToImage != nil){
-            if(self.mArticles[indexPath.row].urlToImage!.count > 0){
-                let url = URL(string: self.mArticles[indexPath.row].urlToImage!)
+        cell.newsAuthorLabel.text = self.shownArticles[indexPath.row].author
+        cell.newsTitleLabel.text = self.shownArticles[indexPath.row].title
+        cell.newsDescriptionLabel.text = self.shownArticles[indexPath.row].description
+        if(self.shownArticles[indexPath.row].urlToImage != nil){
+            if(self.shownArticles[indexPath.row].urlToImage!.count > 0){
+                let url = URL(string: self.shownArticles[indexPath.row].urlToImage!)
                 cell.newsImageView.image = nil
                 self.manager.loadImage(with: url!, into: cell.newsImageView)
             }else{
@@ -72,20 +86,18 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
         }else{
             cell.newsImageView.image = #imageLiteral(resourceName: "Icon-App-76x76-1")
         }
-        if let mDate = self.mArticles[indexPath.row].publishedAt {
-                cell.newsDateLabel.text = "\(mDate.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ss"))"
+        if let mDate = self.shownArticles[indexPath.row].publishedAt {
+            
+            let dateString = mDate
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            let dateObj = dateFormatter.date(from: dateString)
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            print("Dateobj: \(dateFormatter.string(from: dateObj!))")
+                cell.newsDateLabel.text = "\(dateFormatter.string(from: dateObj!))"
         }
         
         return cell
-    }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 300
-//    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        presenter?.fetchNews()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -102,6 +114,54 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
     
     // MARK: Private
     
+    private func setDatabaseObservables(){
+        ref.observe(DataEventType.value, with: { (snapshot) in
+            //colar codg
+            if let articles = snapshot.value as? [String : AnyHashable]{
+                print("TESTANDOTESTANDO")
+                var articlesHolder: [Articles] = []
+                if let mTimestamp = articles["timestamp"] as? Double{
+                    if ((Date().timeIntervalSince1970 - mTimestamp) > 600){
+                        self.hideLoading()
+                        self.presenter?.fetchNews()
+                        return
+                    }
+                }
+                for pos in 0...articles.count {
+                    if let article = articles["article\(pos)"] as? [String : AnyHashable]{
+                        print("RECUPEROU DO FIREBASE")
+                        var mArticle = Articles()
+                        print("\(article)")
+                        mArticle.author = article["author"] as! String
+                        mArticle.description = article["description"] as! String
+                        mArticle.title = article["title"] as! String
+                        mArticle.urlToImage = article["urlToImage"] as! String
+                        mArticle.url = article["url"] as! String
+                        mArticle.publishedAt = article["publishedAt"] as! String
+                        if let mSource = article["url"] as? [String : AnyHashable]{
+                            mArticle.source = Source()
+                            mArticle.source?.id = mSource["id"] as! String
+                            mArticle.source?.name = mSource["name"] as! String
+                        }
+                        articlesHolder.append(mArticle)
+                    }
+                }
+                if articlesHolder.count > 0 {
+                    self.shownArticles = articlesHolder
+                    self.mSearchBar.text = ""
+                    self.mTableView.reloadData()
+                }
+                
+            }else{
+                self.hideLoading()
+                self.presenter?.fetchNews()
+            }
+            self.hideLoading()
+        }) { (error) in
+            self.showMessage(error.localizedDescription, withTitle: "Ops!")
+        }
+    }
+    
     func moveToNextField(_ view: UIView, nextFieldTag: Int) {
         let nextResponder = view.superview?.viewWithTag(nextFieldTag) as UIResponder!
         if (nextResponder != nil) {
@@ -116,11 +176,16 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
 extension  NewsListViewController: NewsListView {
     func updateNews(news: [Articles]) {
         self.mArticles = news
+        self.shownArticles = self.mArticles
         mTableView.reloadData()
+        ref.updateChildValues(["timestamp": Date().timeIntervalSince1970])
+        for pos in 0...(self.mArticles.count - 1) {
+            let JSONString = self.mArticles[pos].toJSONString(prettyPrint: false)
+            if let data = JSONString!.convertToDictionary(){
+                ref.child("article\(pos)").updateChildValues(data)
+            }
+        }
     }
-    
-   
-    //TODO: Implement MainSearchView methods here
     
 }
 
