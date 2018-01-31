@@ -39,15 +39,21 @@ extension MainSearchPresenter: MainSearchPresentation {
 }
 
 extension MainSearchPresenter: MainSearchInteractorOutput {
+    func showMessage(message: String, title: String) {
+        view?.hideLoading()
+        view?.showMessage(message, withTitle: title)
+    }
+    
     func onFetchCoins(mCoins: [CoinAttributes], error: String?) {
         view?.hideLoading()
         view?.updateCoinTable(mCoins: mCoins)
     }
     
-    
     func onFetchProductsFailure(message: String) {
         view?.hideLoading()
         view?.showError(message)
     }
+    
+    
     
 }

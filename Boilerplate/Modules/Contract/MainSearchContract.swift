@@ -24,6 +24,7 @@ protocol MainSearchUseCase: class {
 }
 
 protocol MainSearchInteractorOutput: class {
+    func showMessage(message: String, title: String)
     func onFetchProductsFailure(message: String)
     func onFetchCoins(mCoins: [CoinAttributes], error: String?)
 }

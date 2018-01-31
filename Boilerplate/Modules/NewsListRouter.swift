@@ -43,6 +43,10 @@ class NewsListRouter {
 
 
 extension NewsListRouter: NewsListWireframe {
+    func goToNewsDetail(url: String) {
+        view?.present(NewsDetailRouter.setupModule(url: url), animated: true, completion: nil)
+    }
+    
     
     
     // TODO: Implement wireframe methods

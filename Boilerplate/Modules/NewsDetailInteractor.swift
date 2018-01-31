@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class NewsDetailInteractor {
+    
+    // MARK: Properties
+    weak var output: NewsDetailInteractorOutput?
+    
+}
+
+extension NewsDetailInteractor: NewsDetailUseCase {
+    
+
+}

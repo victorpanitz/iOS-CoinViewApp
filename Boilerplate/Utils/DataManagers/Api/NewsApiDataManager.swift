@@ -20,10 +20,20 @@ class NewsApiDataManager: NSObject {
     //TODO: Implement API requests here
     //TODO: Requestes related to User, Profile, CompanyProfile and similar entities can be implemented here
     
+    let center = URLSessionConfiguration.default
+    var alamoFireManager : Alamofire.SessionManager?
+    override init() {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 10
+        configuration.timeoutIntervalForResource = 10
+         self.alamoFireManager = Alamofire.SessionManager(configuration: configuration)
+    }
+    
     func fetchTopNews(success: @escaping ((_ cryptoNews: CryptoNews?) -> ()), failure: ((_ error: String?) -> Void)?) {
         //guard let header = SessionHelper.shared.authorizationHeader else { return }
+        
         let url = Constants.URL.topCryptoNews
-        Alamofire
+        self.alamoFireManager!
             .request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseObject(completionHandler: { (response: DataResponse<CryptoNews>) in
                 self.responseAPI(url, response.response?.statusCode, response.data!, success: {
@@ -36,8 +46,9 @@ class NewsApiDataManager: NSObject {
     
     func fetchRecentNews(success: @escaping ((_ cryptoNews: CryptoNews?) -> ()), failure: ((_ error: String?) -> Void)?) {
         //guard let header = SessionHelper.shared.authorizationHeader else { return }
+       
         let url = Constants.URL.recentCryptoNews
-        Alamofire
+        self.alamoFireManager!
             .request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseObject(completionHandler: { (response: DataResponse<CryptoNews>) in
                 self.responseAPI(url, response.response?.statusCode, response.data!, success: {

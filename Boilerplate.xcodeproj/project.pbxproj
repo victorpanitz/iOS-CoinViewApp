@@ -16,13 +16,14 @@
 		337EB0761DD39BCB00733F9C /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0731DD39BCB00733F9C /* SanFranciscoText-Light.otf */; };
 		337EB0771DD39BCB00733F9C /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0741DD39BCB00733F9C /* SanFranciscoText-Medium.otf */; };
 		337EB0781DD39BCB00733F9C /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0751DD39BCB00733F9C /* SanFranciscoText-Regular.otf */; };
-		33B53F251DD0ECD500462C66 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		33B53F251DD0ECD500462C66 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		33BE59961E36CCB4000661F6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE59951E36CCB4000661F6 /* UserProfile.swift */; };
 		33BE59981E36CD07000661F6 /* ResponseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE59971E36CD07000661F6 /* ResponseErrors.swift */; };
 		33CAF4D41DD75AF600465298 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33CAF4D61DD75AF600465298 /* Localizable.strings */; };
 		33CAF4D91DD75BDD00465298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CAF4D81DD75BDD00465298 /* LaunchScreen.storyboard */; };
 		33D965911E946693001EDF07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D965901E946693001EDF07 /* Assets.xcassets */; };
 		3CDD38D2523DC3CFAE1DEEE7 /* Pods_Boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC14883EEB97F91D4E3FD81 /* Pods_Boilerplate.framework */; };
+		714C875B20213C0000590B34 /* NewsDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714C875A20213C0000590B34 /* NewsDetail.storyboard */; };
 		715787CD2016169C00DE5355 /* TabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715787CC2016169C00DE5355 /* TabBarContract.swift */; };
 		715787CF201616AC00DE5355 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715787CE201616AC00DE5355 /* TabBarRouter.swift */; };
 		715787D1201616C500DE5355 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715787D0201616C500DE5355 /* TabBarPresenter.swift */; };
@@ -128,6 +129,7 @@
 		33CAF4D81DD75BDD00465298 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Application/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33D965901E946693001EDF07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets/Images/Assets.xcassets; sourceTree = "<group>"; };
 		447304C35B86016CFCC9F1B8 /* Pods-Boilerplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boilerplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boilerplate/Pods-Boilerplate.debug.xcconfig"; sourceTree = "<group>"; };
+		714C875A20213C0000590B34 /* NewsDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsDetail.storyboard; sourceTree = "<group>"; };
 		715787CC2016169C00DE5355 /* TabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContract.swift; sourceTree = "<group>"; };
 		715787CE201616AC00DE5355 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		715787D0201616C500DE5355 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
@@ -611,6 +613,7 @@
 			isa = PBXGroup;
 			children = (
 				71BE32A4201788BC0009B26D /* NewsDetailViewController.swift */,
+				714C875A20213C0000590B34 /* NewsDetail.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -890,6 +893,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				337EB0781DD39BCB00733F9C /* SanFranciscoText-Regular.otf in Resources */,
+				714C875B20213C0000590B34 /* NewsDetail.storyboard in Resources */,
 				337EB0761DD39BCB00733F9C /* SanFranciscoText-Light.otf in Resources */,
 				33D965911E946693001EDF07 /* Assets.xcassets in Resources */,
 				71E370E62016D189002859BF /* MainSearch.storyboard in Resources */,
@@ -901,7 +905,7 @@
 				E1164E351EF35D3300B9B565 /* PlainButtonCell.xib in Resources */,
 				71BE32AF2017B24E0009B26D /* GoogleService-Info.plist in Resources */,
 				337EB0771DD39BCB00733F9C /* SanFranciscoText-Medium.otf in Resources */,
-				33B53F251DD0ECD500462C66 /* BuildFile in Resources */,
+				33B53F251DD0ECD500462C66 /* (null) in Resources */,
 				E1164E311EF35D2300B9B565 /* SectionHeaderLabelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1272,7 +1276,47 @@
 					"\"UIKit\"",
 					"-lstdc++",
 				);
-				"OTHER_LDFLAGS[arch=*]" = "$(inherited) -ObjC -l\"c++\" -l\"z\" -framework \"Alamofire\" -framework \"AlamofireObjectMapper\" -framework \"Crashlytics\" -framework \"Fabric\" -framework \"KeychainSwift\" -framework \"Localize_Swift\" -framework \"MBProgressHUD\" -framework \"NextResponderTextField\" -framework \"ObjectMapper\" -framework \"ObjectMapper_Realm\" -framework \"ReachabilitySwift\" -framework \"Realm\" -framework \"RealmSwift\" -framework \"Security\" -framework \"SystemConfiguration\" -framework \"UIColor_Hex_Swift\" -framework \"UIKit\" -lstdc++";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AlamofireObjectMapper\"",
+					"-framework",
+					"\"Crashlytics\"",
+					"-framework",
+					"\"Fabric\"",
+					"-framework",
+					"\"KeychainSwift\"",
+					"-framework",
+					"\"Localize_Swift\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"NextResponderTextField\"",
+					"-framework",
+					"\"ObjectMapper\"",
+					"-framework",
+					"\"ObjectMapper_Realm\"",
+					"-framework",
+					"\"ReachabilitySwift\"",
+					"-framework",
+					"\"Realm\"",
+					"-framework",
+					"\"RealmSwift\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIColor_Hex_Swift\"",
+					"-framework",
+					"\"UIKit\"",
+					"-lstdc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = victor.CoinApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

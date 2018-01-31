@@ -28,7 +28,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-9l-yre">
                                 <rect key="frame" x="0.0" y="209" width="375" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" red="0.33480685949325562" green="0.75683730840682983" blue="0.99831587076187134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="61" id="wbt-3V-tMq" customClass="CoinDetailCell" customModule="Boilerplate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="61"/>
@@ -38,25 +38,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SGG-sd-kFk">
-                                                    <rect key="frame" x="8" y="8" width="359" height="44.5"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="45"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qQ-Oc-DEZ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qQ-Oc-DEZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="25"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.4547257" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGV-VY-qob">
-                                                            <rect key="frame" x="0.0" y="25" width="359" height="19.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.4547257" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGV-VY-qob">
+                                                            <rect key="frame" x="0.0" y="25" width="359" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="oOm-x9-CPn"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="vGV-VY-qob" firstAttribute="top" secondItem="8qQ-Oc-DEZ" secondAttribute="bottom" id="7xu-FF-Uve"/>
                                                         <constraint firstAttribute="bottom" secondItem="vGV-VY-qob" secondAttribute="bottom" id="Bjn-g2-JEe"/>
+                                                        <constraint firstItem="vGV-VY-qob" firstAttribute="top" secondItem="8qQ-Oc-DEZ" secondAttribute="bottom" id="Ykc-PW-lsD"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8qQ-Oc-DEZ" secondAttribute="trailing" constant="8" id="glb-Tp-7Sm"/>
+                                                        <constraint firstItem="8qQ-Oc-DEZ" firstAttribute="leading" secondItem="SGG-sd-kFk" secondAttribute="leading" constant="8" id="pJX-tT-pXn"/>
                                                         <constraint firstItem="vGV-VY-qob" firstAttribute="leading" secondItem="SGG-sd-kFk" secondAttribute="leading" id="sv1-5V-BQ9"/>
+                                                        <constraint firstItem="8qQ-Oc-DEZ" firstAttribute="top" secondItem="SGG-sd-kFk" secondAttribute="top" id="tfp-J5-Tnk"/>
                                                         <constraint firstAttribute="trailing" secondItem="vGV-VY-qob" secondAttribute="trailing" id="wY5-Oq-jBK"/>
                                                     </constraints>
                                                 </stackView>
@@ -93,7 +99,6 @@
                                                 <action selector="dismissView:" destination="CZx-xz-miV" id="jok-4J-ID5"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="EIn-Z9-gMX"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

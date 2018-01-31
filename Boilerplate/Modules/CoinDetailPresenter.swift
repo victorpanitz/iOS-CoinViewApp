@@ -45,17 +45,21 @@ extension CoinDetailPresenter: CoinDetailPresentation {
 }
 
 extension CoinDetailPresenter: CoinDetailInteractorOutput {
+    func showMessage(message: String, title: String) {
+        view?.hideLoading()
+        view?.showMessage(message, withTitle: title)
+    }
+    
     func onFetchCoins(mCoins: [CoinAttributes], error: String?) {
         view?.hideLoading()
         let parsedCoin = mCoins[0]
         view?.updateCoinTable(mCoins: parsedCoin)
-
     }
-    
     
     func onFetchProductsFailure(message: String) {
         view?.showError(message)
     }
+    
     
     
     

@@ -11,6 +11,8 @@ import UIKit
 
 class NewsTableCell : UITableViewCell{
     
+    var url: String?
+    
     @IBOutlet var newsImageView: UIImageView!
     @IBOutlet var newsDateLabel: UILabel!
     @IBOutlet var newsTitleLabel: UILabel!

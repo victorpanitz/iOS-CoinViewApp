@@ -35,8 +35,7 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showLoading()
-        FirebaseApp.configure()
-        self.ref =  Database.database().reference().root
+    
         self.mTableView.delegate = self
         self.mTableView.dataSource = self
         self.mTableView.allowsMultipleSelection = false
@@ -44,7 +43,6 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.red
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
         
         mSearchBar.placeholder = "Filter"
         mSearchBar
@@ -61,8 +59,7 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
             })
             .disposed(by: disposeBag)
         
-        //presenter?.fetchNews()
-        setDatabaseObservables()
+        presenter?.setRealtimeObserver()
         hideKeyboardWhenTappedAround()
     }
     
@@ -72,6 +69,7 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mTableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableCell
+        cell.url = self.shownArticles[indexPath.row].url
         cell.newsAuthorLabel.text = self.shownArticles[indexPath.row].author
         cell.newsTitleLabel.text = self.shownArticles[indexPath.row].title
         cell.newsDescriptionLabel.text = self.shownArticles[indexPath.row].description
@@ -87,7 +85,6 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
             cell.newsImageView.image = #imageLiteral(resourceName: "Icon-App-76x76-1")
         }
         if let mDate = self.shownArticles[indexPath.row].publishedAt {
-            
             let dateString = mDate
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -96,8 +93,13 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
             print("Dateobj: \(dateFormatter.string(from: dateObj!))")
                 cell.newsDateLabel.text = "\(dateFormatter.string(from: dateObj!))"
         }
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let url: String = shownArticles[indexPath.row].url {
+            presenter?.goToNewsDetail(url: url)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,54 +115,7 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
     // MARK: IBActions
     
     // MARK: Private
-    
-    private func setDatabaseObservables(){
-        ref.observe(DataEventType.value, with: { (snapshot) in
-            //colar codg
-            if let articles = snapshot.value as? [String : AnyHashable]{
-                print("TESTANDOTESTANDO")
-                var articlesHolder: [Articles] = []
-                if let mTimestamp = articles["timestamp"] as? Double{
-                    if ((Date().timeIntervalSince1970 - mTimestamp) > 600){
-                        self.hideLoading()
-                        self.presenter?.fetchNews()
-                        return
-                    }
-                }
-                for pos in 0...articles.count {
-                    if let article = articles["article\(pos)"] as? [String : AnyHashable]{
-                        print("RECUPEROU DO FIREBASE")
-                        var mArticle = Articles()
-                        print("\(article)")
-                        mArticle.author = article["author"] as! String
-                        mArticle.description = article["description"] as! String
-                        mArticle.title = article["title"] as! String
-                        mArticle.urlToImage = article["urlToImage"] as! String
-                        mArticle.url = article["url"] as! String
-                        mArticle.publishedAt = article["publishedAt"] as! String
-                        if let mSource = article["url"] as? [String : AnyHashable]{
-                            mArticle.source = Source()
-                            mArticle.source?.id = mSource["id"] as! String
-                            mArticle.source?.name = mSource["name"] as! String
-                        }
-                        articlesHolder.append(mArticle)
-                    }
-                }
-                if articlesHolder.count > 0 {
-                    self.shownArticles = articlesHolder
-                    self.mSearchBar.text = ""
-                    self.mTableView.reloadData()
-                }
-                
-            }else{
-                self.hideLoading()
-                self.presenter?.fetchNews()
-            }
-            self.hideLoading()
-        }) { (error) in
-            self.showMessage(error.localizedDescription, withTitle: "Ops!")
-        }
-    }
+
     
     func moveToNextField(_ view: UIView, nextFieldTag: Int) {
         let nextResponder = view.superview?.viewWithTag(nextFieldTag) as UIResponder!
@@ -174,17 +129,25 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
 }
 
 extension  NewsListViewController: NewsListView {
-    func updateNews(news: [Articles]) {
-        self.mArticles = news
-        self.shownArticles = self.mArticles
-        mTableView.reloadData()
-        ref.updateChildValues(["timestamp": Date().timeIntervalSince1970])
-        for pos in 0...(self.mArticles.count - 1) {
-            let JSONString = self.mArticles[pos].toJSONString(prettyPrint: false)
-            if let data = JSONString!.convertToDictionary(){
-                ref.child("article\(pos)").updateChildValues(data)
+    func updateNews(news: [Articles], isFromObserver: Bool) {
+        if isFromObserver {
+            self.mArticles = news
+            self.shownArticles = self.mArticles
+            mTableView.reloadData()
+            ref.updateChildValues(["timestamp": Date().timeIntervalSince1970])
+            for pos in 0...(self.mArticles.count - 1) {
+                let JSONString = self.mArticles[pos].toJSONString(prettyPrint: false)
+                if let data = JSONString!.convertToDictionary(){
+                    ref.child("article\(pos)").updateChildValues(data)
+                }
             }
+        }else{
+            self.mArticles = news
+            self.shownArticles = self.mArticles
+            self.mSearchBar.text = nil
+            self.mTableView.reloadData()
         }
+        
     }
     
 }

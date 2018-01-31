@@ -7,3 +7,23 @@
 //
 
 import Foundation
+protocol NewsDetailView: BaseView {
+    func setUrl(url: String)
+}
+
+protocol NewsDetailPresentation: class {
+    func setUrl(url: String)
+    func dismissNewsDetailView()
+}
+
+protocol NewsDetailUseCase: class {
+    
+}
+
+protocol NewsDetailInteractorOutput: class {
+   
+}
+
+protocol NewsDetailWireframe: class {
+    func dismissNewsDetailView()
+}
