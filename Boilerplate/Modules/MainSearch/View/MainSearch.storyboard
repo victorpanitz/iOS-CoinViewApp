@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="-200" width="320" height="768"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-bU-vUR">
-                                <rect key="frame" x="0.0" y="100" width="320" height="468"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="QoB-dt-VeK">
@@ -120,7 +120,7 @@
                             <constraint firstItem="03V-nP-By6" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="QLx-cd-BDU"/>
                             <constraint firstItem="e0o-kO-cAX" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="Ych-mb-1cQ"/>
                             <constraint firstItem="84H-ss-gfV" firstAttribute="top" secondItem="03V-nP-By6" secondAttribute="bottom" constant="8" id="atY-VV-cLa"/>
-                            <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="84H-ss-gfV" secondAttribute="bottom" id="cf6-je-tdd"/>
+                            <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="84H-ss-gfV" secondAttribute="bottom" constant="8" id="cf6-je-tdd"/>
                             <constraint firstItem="03V-nP-By6" firstAttribute="top" secondItem="W6v-ap-3sT" secondAttribute="top" id="jlz-7f-nEn"/>
                             <constraint firstItem="e0o-kO-cAX" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="myI-en-QaK"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="tSH-CU-FV4"/>
