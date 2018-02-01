@@ -121,7 +121,7 @@
 		337EB0731DD39BCB00733F9C /* SanFranciscoText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-Light.otf"; path = "Resources/SanFranciscoText-Light.otf"; sourceTree = "<group>"; };
 		337EB0741DD39BCB00733F9C /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-Medium.otf"; path = "Resources/SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
 		337EB0751DD39BCB00733F9C /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-Regular.otf"; path = "Resources/SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
-		33B53F1C1DD0ECD500462C66 /* Boilerplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boilerplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B53F1C1DD0ECD500462C66 /* CoinView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B53F2B1DD0ECD500462C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33BE59951E36CCB4000661F6 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = Entities/UserProfile/UserProfile.swift; sourceTree = "<group>"; };
 		33BE59971E36CD07000661F6 /* ResponseErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseErrors.swift; path = Entities/UserProfile/ResponseErrors.swift; sourceTree = "<group>"; };
@@ -427,7 +427,7 @@
 		33B53F1D1DD0ECD500462C66 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33B53F1C1DD0ECD500462C66 /* Boilerplate.app */,
+				33B53F1C1DD0ECD500462C66 /* CoinView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -821,9 +821,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		33B53F1B1DD0ECD500462C66 /* Boilerplate */ = {
+		33B53F1B1DD0ECD500462C66 /* CoinView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33B53F441DD0ECD600462C66 /* Build configuration list for PBXNativeTarget "Boilerplate" */;
+			buildConfigurationList = 33B53F441DD0ECD600462C66 /* Build configuration list for PBXNativeTarget "CoinView" */;
 			buildPhases = (
 				2FD19320E3BB53ABF436C281 /* [CP] Check Pods Manifest.lock */,
 				33B53F181DD0ECD500462C66 /* Sources */,
@@ -838,9 +838,9 @@
 			);
 			dependencies = (
 			);
-			name = Boilerplate;
+			name = CoinView;
 			productName = EitaPAY;
-			productReference = 33B53F1C1DD0ECD500462C66 /* Boilerplate.app */;
+			productReference = 33B53F1C1DD0ECD500462C66 /* CoinView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -869,7 +869,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 33B53F171DD0ECD500462C66 /* Build configuration list for PBXProject "Boilerplate" */;
+			buildConfigurationList = 33B53F171DD0ECD500462C66 /* Build configuration list for PBXProject "CoinView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -882,7 +882,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				33B53F1B1DD0ECD500462C66 /* Boilerplate */,
+				33B53F1B1DD0ECD500462C66 /* CoinView */,
 			);
 		};
 /* End PBXProject section */
@@ -1409,7 +1409,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33B53F171DD0ECD500462C66 /* Build configuration list for PBXProject "Boilerplate" */ = {
+		33B53F171DD0ECD500462C66 /* Build configuration list for PBXProject "CoinView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33B53F421DD0ECD600462C66 /* Debug */,
@@ -1418,7 +1418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33B53F441DD0ECD600462C66 /* Build configuration list for PBXNativeTarget "Boilerplate" */ = {
+		33B53F441DD0ECD600462C66 /* Build configuration list for PBXNativeTarget "CoinView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33B53F451DD0ECD600462C66 /* Debug */,
