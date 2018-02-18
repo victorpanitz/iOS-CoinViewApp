@@ -16,13 +16,13 @@ class CoinApiDataManager: NSObject {
     //TODO: Implement API requests here
     //TODO: Requestes related to User, Profile, CompanyProfile and similar entities can be implemented here
 
-
     func fetchCoins(success: @escaping ((_ coins: Coin?) -> ()), failure: ((_ error: String?) -> Void)?) {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 10
         configuration.timeoutIntervalForResource = 10
         let alamoFireManager = Alamofire.SessionManager(configuration: configuration)
 
+        
         let url = Constants.URL.baseURL + Constants.URL.getMarkets
         Alamofire
             .request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)

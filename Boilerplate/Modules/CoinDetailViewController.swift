@@ -39,8 +39,6 @@ class CoinDetailViewController: BaseViewController, StoryboardLoadable, UITableV
         self.mTableView.dataSource = self
         setupView()
         
-        
-        
         if let marketName = mCoin?.marketName {
             presenter?.retrieveCoins(marketName: (mCoin?.marketName!)!)
         }
@@ -105,43 +103,52 @@ extension  CoinDetailViewController: CoinDetailView {
     func updateCoinTable(mCoins: CoinAttributes) {
         
         var last = mCoins.last
-        if last < 0.01 {
-            last = (last * 10000000000) / 10000000000
+        if last < 1.0 {
+            coinDetails.append(("Last", String( format:"%.8f",last)))
+        }else{
+            coinDetails.append(("Last", String( format:"%.2f",last)))
         }
-        coinDetails.append(("Last", String(last)))
         
         var prevDay = mCoins.prevDay
-        if prevDay < 0.01 {
-            prevDay = (prevDay * 10000000000) / 10000000000
+        if prevDay < 1.0 {
+            coinDetails.append(("Previous Day", String(format:"%.8f",prevDay)))
+        }else{
+            coinDetails.append(("Previous Day", String(format:"%.2f",prevDay)))
+
         }
-        coinDetails.append(("Previous Day", String(prevDay)))
         
         var high = mCoins.high
-        if high < 0.01 {
-            high = (high * 10000000000) / 10000000000
+        if high < 1.0 {
+            coinDetails.append(("High", String(format:"%.8f",high)))
+        }else{
+            coinDetails.append(("High", String(format:"%.2f",high)))
         }
-        coinDetails.append(("High", String(high)))
         
         var low = mCoins.low
-        if low < 0.01 {
-            low = (low * 10000000000) / 10000000000
+        if low < 1.0 {
+            coinDetails.append(("Low", String(format:"%.8f",low)))
+        }else{
+            coinDetails.append(("Low", String(format:"%.2f",low)))
         }
-        coinDetails.append(("Low", String(low)))
         
         var volume = mCoins.volume
         coinDetails.append(("Volume", String(volume)))
         
         var bid = mCoins.bid
-        if bid < 0.01 {
-            bid = (bid * 10000000000) / 10000000000
+        if bid < 1.0 {
+            coinDetails.append(("Bid", String(format:"%.8f",bid)))
+        }else{
+            coinDetails.append(("Bid", String(format:"%.2f",bid)))
+
         }
-        coinDetails.append(("Bid", String(bid)))
         
         var ask = mCoins.ask
         if ask < 0.01 {
-            ask = (ask * 10000000000) / 10000000000
+            coinDetails.append(("Ask", String(format:"%.8f",ask)))
+        }else{
+            coinDetails.append(("Ask", String(format:"%.2f",ask)))
+
         }
-        coinDetails.append(("Ask", String(ask)))
         
         var openBuyOrders = mCoins.openBuyOrders
         coinDetails.append(("Open buy orders", String(openBuyOrders)))
@@ -162,7 +169,7 @@ extension  CoinDetailViewController: CoinDetailView {
         if self.marketNameLabel != nil {
             self.marketNameLabel.text = self.mCoin?.marketName
         }
-        if self.mNavigationBar != nil{
+        if self.mNavigationBar != nil {
             self.mNavigationBar.topItem?.title = self.mCoin?.marketCurrencyLong
         }
         

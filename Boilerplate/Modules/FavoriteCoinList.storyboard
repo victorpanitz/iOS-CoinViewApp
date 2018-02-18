@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--FavoriteCoinListViewController-->
+        <scene sceneID="8jV-6J-a9I">
+            <objects>
+                <viewController storyboardIdentifier="MainSearchViewController" title="FavoriteCoinListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yw7-gK-w8l" customClass="MainSearchViewController" customModule="CoinView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gDZ-qD-wNL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GYC-pE-J0R">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="kjA-Ia-QC3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="xd0-EQ-g5e"/>
+                                    </constraints>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mCell" rowHeight="56" id="gmx-Dt-O00" customClass="mTableViewCell" customModule="CoinView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gmx-Dt-O00" id="UHl-Wh-XU9">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I6Q-s4-Cai">
+                                                    <rect key="frame" x="15" y="8" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="SNt-bK-yIZ"/>
+                                                        <constraint firstAttribute="width" secondItem="I6Q-s4-Cai" secondAttribute="height" multiplier="1:1" id="VvR-qi-3WB"/>
+                                                        <constraint firstAttribute="width" constant="40" id="yrS-X4-vqD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkb-6A-grJ">
+                                                    <rect key="frame" x="63" y="18" width="271" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Fkb-6A-grJ" firstAttribute="centerY" secondItem="I6Q-s4-Cai" secondAttribute="centerY" id="ADo-aa-eNP"/>
+                                                <constraint firstItem="I6Q-s4-Cai" firstAttribute="leading" secondItem="UHl-Wh-XU9" secondAttribute="leadingMargin" id="cgQ-Cc-Qot"/>
+                                                <constraint firstItem="I6Q-s4-Cai" firstAttribute="centerY" secondItem="UHl-Wh-XU9" secondAttribute="centerY" id="hQg-eL-P5k"/>
+                                                <constraint firstItem="Fkb-6A-grJ" firstAttribute="trailing" secondItem="UHl-Wh-XU9" secondAttribute="trailingMargin" id="piY-nK-uyj"/>
+                                                <constraint firstItem="Fkb-6A-grJ" firstAttribute="leading" secondItem="I6Q-s4-Cai" secondAttribute="trailing" constant="8" id="y1c-R3-Zq3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coinLogoImageView" destination="I6Q-s4-Cai" id="LIW-Vt-6Qm"/>
+                                            <outlet property="coinTitleLabel" destination="Fkb-6A-grJ" id="37d-Db-MiK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eqk-JQ-G0W">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Favorite Coins" id="NCV-zX-spK"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Eqk-JQ-G0W" firstAttribute="trailing" secondItem="2MT-Vt-OXZ" secondAttribute="trailing" id="Inn-BJ-OvV"/>
+                            <constraint firstItem="Eqk-JQ-G0W" firstAttribute="top" secondItem="2MT-Vt-OXZ" secondAttribute="top" id="Vvb-Yz-rFb"/>
+                            <constraint firstItem="GYC-pE-J0R" firstAttribute="top" secondItem="Eqk-JQ-G0W" secondAttribute="bottom" id="e6J-j6-Yta"/>
+                            <constraint firstItem="Eqk-JQ-G0W" firstAttribute="leading" secondItem="2MT-Vt-OXZ" secondAttribute="leading" id="ngj-Wy-uB9"/>
+                            <constraint firstItem="GYC-pE-J0R" firstAttribute="leading" secondItem="2MT-Vt-OXZ" secondAttribute="leading" id="vgE-BE-h6K"/>
+                            <constraint firstItem="GYC-pE-J0R" firstAttribute="trailing" secondItem="2MT-Vt-OXZ" secondAttribute="trailing" id="w50-5c-WUR"/>
+                            <constraint firstItem="GYC-pE-J0R" firstAttribute="bottom" secondItem="2MT-Vt-OXZ" secondAttribute="bottom" id="xOF-zN-qSq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2MT-Vt-OXZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yli-Ij-M1k"/>
+                    <connections>
+                        <outlet property="mSearchBar" destination="kjA-Ia-QC3" id="0Mh-7D-Fdd"/>
+                        <outlet property="mTableView" destination="GYC-pE-J0R" id="aVv-ni-uG3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sxo-b3-ncC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14191.200000000001" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+</document>

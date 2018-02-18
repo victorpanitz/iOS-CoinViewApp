@@ -2,9 +2,9 @@ platform :ios, '9.0'
 use_frameworks!
 inhibit_all_warnings!
 
-target 'Boilerplate' do
-pod 'Firebase/Database'	
-pod 'Firebase/Core'  
+target 'CoinView' do
+pod 'Firebase/Database'
+pod 'Firebase/Core'
 pod 'MBProgressHUD', '~> 1.0.0'
   pod 'UIColor_Hex_Swift', '~> 3.0.1'
   pod 'NextResponderTextField'

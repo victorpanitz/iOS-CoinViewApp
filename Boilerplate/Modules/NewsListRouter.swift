@@ -44,10 +44,12 @@ class NewsListRouter {
 
 extension NewsListRouter: NewsListWireframe {
     func goToNewsDetail(url: String) {
-        view?.present(NewsDetailRouter.setupModule(url: url), animated: true, completion: nil)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(URL(string: url)!, options: [:])
+        } else {
+            // Fallback on earlier versions
+            return
+        }
     }
     
-    
-    
-    // TODO: Implement wireframe methods
 }

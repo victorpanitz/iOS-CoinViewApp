@@ -6,13 +6,13 @@ PODS:
   - Crashlytics (3.9.3):
     - Fabric (~> 1.7.2)
   - Fabric (1.7.2)
-  - Firebase/Core (4.8.1):
-    - FirebaseAnalytics (= 4.0.7)
+  - Firebase/Core (4.8.2):
+    - FirebaseAnalytics (= 4.0.9)
     - FirebaseCore (= 4.0.14)
-  - Firebase/Database (4.8.1):
+  - Firebase/Database (4.8.2):
     - Firebase/Core
     - FirebaseDatabase (= 4.1.4)
-  - FirebaseAnalytics (4.0.7):
+  - FirebaseAnalytics (4.0.9):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
@@ -49,9 +49,9 @@ PODS:
   - Realm/Headers (3.0.2)
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
-  - RxCocoa (4.1.1):
+  - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
-  - RxSwift (4.1.1)
+  - RxSwift (4.1.2)
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
@@ -79,8 +79,8 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
   Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
-  Firebase: 2721056b8885eef90233b03f37be64358d35d262
-  FirebaseAnalytics: 617afa8c26b57a0c3f11361b248bc9e17bfd8dfd
+  Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
+  FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseCore: 2e0b98fb2d64ca8140136beff15772bdd14d2dd7
   FirebaseDatabase: de4446507ccd3257fca37d16f40e1540324571fd
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
@@ -97,10 +97,10 @@ SPEC CHECKSUMS:
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
-  RxCocoa: fd0862fd2df95fa55562ad28ffd2522c25eb4a85
-  RxSwift: c6e3b1c7b325c7d121cd4327e9d98b7ed746b570
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 9d16206506f151e1e1b81eacad4713f72eddc548
+PODFILE CHECKSUM: c5dc0074366e06a5a732ebb91cfb6ff8c97617de
 
 COCOAPODS: 1.4.0.rc.1

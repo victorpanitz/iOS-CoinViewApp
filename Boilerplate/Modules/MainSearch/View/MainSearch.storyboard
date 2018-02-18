@@ -20,14 +20,11 @@
         <!--MainSearchViewController-->
         <scene sceneID="tni-zf-JdV">
             <objects>
-                <viewController storyboardIdentifier="MainSearchViewController" title="MainSearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cdn-Gn-q5D" customClass="MainSearchViewController" customModule="Boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainSearchViewController" title="MainSearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cdn-Gn-q5D" customClass="MainSearchViewController" customModule="CoinView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qo4-j4-2GC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOGO.001" translatesAutoresizingMaskIntoConstraints="NO" id="e0o-kO-cAX">
-                                <rect key="frame" x="0.0" y="-200" width="320" height="768"/>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-bU-vUR">
                                 <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,7 +38,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mCell" rowHeight="56" id="n7T-9h-90w" customClass="mTableViewCell" customModule="Boilerplate" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mCell" rowHeight="56" id="n7T-9h-90w" customClass="mTableViewCell" customModule="CoinView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="84" width="320" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n7T-9h-90w" id="Rsg-wh-g8n">
@@ -115,14 +112,11 @@
                         <constraints>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="7cQ-bY-zyg"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="bottom" secondItem="W6v-ap-3sT" secondAttribute="bottom" id="ISJ-8P-Hcy"/>
-                            <constraint firstItem="e0o-kO-cAX" firstAttribute="bottom" secondItem="W6v-ap-3sT" secondAttribute="bottom" id="NBP-97-CFf"/>
                             <constraint firstItem="84H-ss-gfV" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" constant="16" id="QKA-ZB-9Mr"/>
                             <constraint firstItem="03V-nP-By6" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="QLx-cd-BDU"/>
-                            <constraint firstItem="e0o-kO-cAX" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="Ych-mb-1cQ"/>
                             <constraint firstItem="84H-ss-gfV" firstAttribute="top" secondItem="03V-nP-By6" secondAttribute="bottom" constant="8" id="atY-VV-cLa"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="top" secondItem="84H-ss-gfV" secondAttribute="bottom" constant="8" id="cf6-je-tdd"/>
                             <constraint firstItem="03V-nP-By6" firstAttribute="top" secondItem="W6v-ap-3sT" secondAttribute="top" id="jlz-7f-nEn"/>
-                            <constraint firstItem="e0o-kO-cAX" firstAttribute="leading" secondItem="W6v-ap-3sT" secondAttribute="leading" id="myI-en-QaK"/>
                             <constraint firstItem="vbh-bU-vUR" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="tSH-CU-FV4"/>
                             <constraint firstItem="W6v-ap-3sT" firstAttribute="trailing" secondItem="84H-ss-gfV" secondAttribute="trailing" constant="16" id="yL4-Q4-ySy"/>
                             <constraint firstItem="03V-nP-By6" firstAttribute="trailing" secondItem="W6v-ap-3sT" secondAttribute="trailing" id="zhA-tX-YVz"/>
@@ -141,7 +135,4 @@
             <point key="canvasLocation" x="-14190" y="142.6056338028169"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LOGO.001" width="1024" height="768"/>
-    </resources>
 </document>

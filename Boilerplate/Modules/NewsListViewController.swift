@@ -90,8 +90,7 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
             let dateObj = dateFormatter.date(from: dateString)
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            print("Dateobj: \(dateFormatter.string(from: dateObj!))")
-                cell.newsDateLabel.text = "\(dateFormatter.string(from: dateObj!))"
+            cell.newsDateLabel.text = "\(dateFormatter.string(from: dateObj!))"
         }
         return cell
     }
