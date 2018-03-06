@@ -20,10 +20,20 @@ class MainSearchInteractor {
     weak var output: MainSearchInteractorOutput?
     var apiDataManager = CoinApiDataManager()
     var localDataManager = ProfileLocalDataManager()
+    var coinLocalDataManager = CoinsLocalDataManager()
     
 }
 
 extension MainSearchInteractor: MainSearchUseCase {
+    func saveCoin(_ coin: CoinAttributes) {
+        if let retrievedCoins: [CoinAttributes] = coinLocalDataManager.getFavoriteCoins(){
+            var mCoins = retrievedCoins
+            mCoins.append(coin)
+            coinLocalDataManager.saveFavoriteCoins(mCoins)
+        }
+        
+    }
+    
     func retrieveCoins() {
         self.apiDataManager.fetchCoins(success: { (coins) in
             var mCoins = [CoinAttributes]()

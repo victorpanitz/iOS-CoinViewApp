@@ -50,7 +50,7 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
             .rx.text // Observable property thanks to RxCocoa
             .orEmpty // Make it non-optional
             .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
-            .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
+            //.distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
             .subscribe(onNext: { [unowned self] query in // Here we subscribe to every new value
                 self.mShownCoins = self.mCoinReferenced.filter {  ($0.marketCurrencyLong!.hasPrefix(query))}
                 self.mShownCoins.sort { (first, next) -> Bool in
@@ -85,7 +85,9 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
             for i in 1...20 {
                 self.generateFavoriteAnimation()
             }
-            print("MORE•ACTION")
+            if let coinAttribute: CoinAttributes = self.mShownCoins[indexPath.row] {
+                self.presenter?.saveCoin(coinAttribute)
+            }
         })
         moreRowAction.backgroundColor = UIColor.black
         return [moreRowAction]

@@ -9,10 +9,10 @@
 import Foundation
 import ObjectMapper
 import Localize_Swift
+import RealmSwift
 
-class CoinAttributes: Mappable {
+class CoinAttributes: Object, Mappable {
     
-
     @objc dynamic var marketCurrency: String?
     @objc dynamic var baseCurrency: String?
     @objc dynamic var marketCurrencyLong: String?
@@ -38,6 +38,10 @@ class CoinAttributes: Mappable {
     
     // MARK: Init methods
     
+    
+    override static func primaryKey() -> String? {
+        return "marketName"
+    }
     
     convenience required init?(map: Map) {
         self.init()

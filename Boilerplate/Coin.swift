@@ -9,8 +9,9 @@
 import Foundation
 import ObjectMapper
 import Localize_Swift
+import RealmSwift
 
-class Coin:  Mappable {
+class Coin:  Object, Mappable {
     
      var success = 0
      var message: String?

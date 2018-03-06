@@ -20,6 +20,10 @@ class MainSearchPresenter {
 }
 
 extension MainSearchPresenter: MainSearchPresentation {
+    func saveCoin(_ coin: CoinAttributes) {
+        interactor?.saveCoin(coin)
+    }
+    
     func showCoinDetail(_ coinAttributes: CoinAttributes) {
         router?.showCoinDetail(coinAttributes)
     }

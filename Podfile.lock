@@ -44,11 +44,11 @@ PODS:
     - ObjectMapper
     - RealmSwift
   - ReachabilitySwift (3)
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
-  - RealmSwift (3.0.2):
-    - Realm (= 3.0.2)
+  - Realm (3.1.1):
+    - Realm/Headers (= 3.1.1)
+  - Realm/Headers (3.1.1)
+  - RealmSwift (3.1.1):
+    - Realm (= 3.1.1)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
@@ -69,7 +69,7 @@ DEPENDENCIES:
   - ObjectMapper (~> 3.0.0)
   - ObjectMapper+Realm
   - ReachabilitySwift (~> 3)
-  - RealmSwift (~> 3.0.2)
+  - RealmSwift (~> 3.1.1)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - UIColor_Hex_Swift (~> 3.0.1)
@@ -95,12 +95,12 @@ SPEC CHECKSUMS:
   ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   ObjectMapper+Realm: 3188789fb77c189c7a83cb625333a607eb61a08f
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
-  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
+  RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: c5dc0074366e06a5a732ebb91cfb6ff8c97617de
+PODFILE CHECKSUM: d0a306b99340ecdae765f13e613dd644548ad478
 
 COCOAPODS: 1.4.0.rc.1

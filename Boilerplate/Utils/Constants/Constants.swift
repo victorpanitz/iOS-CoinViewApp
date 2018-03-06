@@ -23,6 +23,7 @@ enum Constants {
        static let recentCryptoNews = "https://newsapi.org/v2/everything?sources=crypto-coins-news&apiKey=15d3fdeee18c4ba5a0c73c2c50d822ad"
     }
     
+    
     enum Storyboard {
         static let mainSearchStoryboard = "MainSearchStoryboard"
     }

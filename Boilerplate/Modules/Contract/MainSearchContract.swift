@@ -16,10 +16,12 @@ protocol MainSearchView: BaseView {
 protocol MainSearchPresentation: class {
     func doSomething()
     func retrieveCoins()
+    func saveCoin(_ coin: CoinAttributes)
     func showCoinDetail(_ coinAttributes: CoinAttributes)
 }
 
 protocol MainSearchUseCase: class {
+    func saveCoin(_ coin: CoinAttributes)
     func retrieveCoins()
 }
 

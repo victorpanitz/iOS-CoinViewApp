@@ -41,9 +41,9 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
         self.mTableView.dataSource = self
         self.mTableView.allowsMultipleSelection = false
         
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor.red
-        self.navigationController?.navigationBar.tintColor = UIColor.white
+            self.navigationController?.navigationBar.isTranslucent = false
+            self.navigationController?.navigationBar.barTintColor = UIColor.red
+            self.navigationController?.navigationBar.tintColor = UIColor.white
         
         mSearchBar.placeholder = "Filter"
         mSearchBar
@@ -170,51 +170,11 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
             view.resignFirstResponder()
         }
     }
-    
-//    fileprivate func generateFavoriteAnimation(){
-//
-//        let aleatory = drand48()
-//        var imageView = UIImageView()
-//        imageView = aleatory > 0.5 ? UIImageView(image: #imageLiteral(resourceName: "star")) : UIImageView(image: #imageLiteral(resourceName: "coin"))
-//
-//        let dimension = 20 + drand48() * 10
-//        imageView.frame = CGRect(x: 0, y: 0, width: dimension, height: dimension)
-//
-//        let animation = CAKeyframeAnimation(keyPath: "position")
-//
-//        animation.path = customPath().cgPath
-//        animation.duration = 3 + drand48() * 5
-//        animation.fillMode = kCAFillModeForwards
-//        animation.isRemovedOnCompletion = false
-//        animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
-//
-//        imageView.layer.add(animation, forKey: nil)
-//        view.addSubview(imageView)
-//
-//    }
+
     
 }
 
-//func customPath() -> UIBezierPath{
-//    let path = UIBezierPath()
-//    path.move(to: CGPoint(x:0,y: 1200))
-//    let endpoint = CGPoint(x: 800, y: 500)
-//
-//    let randomYShift = 200 + drand48() * 800
-//    let cp1 = CGPoint(x: 100, y: 100 - randomYShift)
-//    let cp2 = CGPoint(x: 200, y: 300 + randomYShift)
-//
-//    path.addCurve(to: endpoint, controlPoint1: cp1, controlPoint2: cp2)
-//    return path
-//}
-//
-//class CurvedView: UIView{
-//    override func draw(_ rect: CGRect) {
-//        let path = customPath()
-//        path.lineWidth = 3
-//        path.stroke()
-//    }
-//}
+
 
 extension  FavoriteCoinListViewController: FavoriteCoinListView {
     func updateCoinTable(mCoins: [CoinAttributes]) {
