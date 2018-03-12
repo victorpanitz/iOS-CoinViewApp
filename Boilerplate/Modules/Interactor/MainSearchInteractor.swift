@@ -26,23 +26,31 @@ class MainSearchInteractor {
 
 extension MainSearchInteractor: MainSearchUseCase {
     func saveCoin(_ coin: CoinAttributes) {
-        if let retrievedCoins: [CoinAttributes] = coinLocalDataManager.getFavoriteCoins(){
-            var mCoins = retrievedCoins
-            mCoins.append(coin)
-            coinLocalDataManager.saveFavoriteCoins(mCoins)
-        }
+
+//        let mCoins2: [CoinAttributes] = self.coinLocalDataManager.getFavoriteCoins()
+        print(" ANTES ANTES \n")
+        
+        self.coinLocalDataManager.saveFavoriteCoins(coin)
+
+        
+        let mCoins: [CoinAttributes] = self.coinLocalDataManager.getFavoriteCoins()
+        print(" DEPOIS DEPOIS \(mCoins))\n")
+        
+//        output?.onCoinSaved(coins: self.coinLocalDataManager.getFavoriteCoins())
+        
+
         
     }
     
     func retrieveCoins() {
-        self.apiDataManager.fetchCoins(success: { (coins) in
-            var mCoins = [CoinAttributes]()
-            coins?.result?.forEach({mAttributes in
-                mCoins.append(mAttributes)
-            })
-            if (mCoins.count > 0){
-                self.output?.onFetchCoins(mCoins: mCoins, error: nil)
-            }
+        self.apiDataManager.fetchCoins(
+            success: { (coins) in
+                var mCoins = [CoinAttributes]()
+                for i in (coins?.result)! {
+                    mCoins.append(i)
+                }
+                (self.output?.onFetchCoins(mCoins: mCoins, error: nil))!
+                
         }, failure: { (error) in
             self.output?.showMessage(message: error!, title: "Ops!")
         })
@@ -56,6 +64,6 @@ extension MainSearchInteractor: MainSearchUseCase {
         }
         
     }
-
-
+    
+    
 }

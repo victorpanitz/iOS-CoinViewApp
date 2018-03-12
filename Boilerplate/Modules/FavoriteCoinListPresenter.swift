@@ -19,13 +19,15 @@ class FavoriteCoinListPresenter {
 }
 
 extension FavoriteCoinListPresenter: FavoriteCoinListPresentation {
+    func retrieveCoins() {
+        interactor?.retrieveCoins()
+    }
+    
     func showCoinDetail(_ coinAttributes: CoinAttributes) {
         return
     }
     
-    func retrieveCoinsFromRealm() {
-        return
-    }
+   
     
 }
 

@@ -11,36 +11,39 @@ import RealmSwift
 import Realm
 
 class CoinsLocalDataManager: NSObject {
-
-    func saveFavoriteCoins(_ coins: [CoinAttributes]){
-        DispatchQueue.global().async(execute: {
-            let realm = try! Realm()
-            let oldFavoriteCoins = realm.objects(CoinAttributes.self)
-            while !oldFavoriteCoins.isEmpty {
-                try! realm.write {
-                    realm.delete(oldFavoriteCoins)
-                }
+    
+    func saveFavoriteCoins(_ coins: CoinAttributes){
+        let realm = try! Realm()
+        try! realm.write {
+            
+            if var mCoin: CoinAttributes = realm.object(ofType: CoinAttributes.self, forPrimaryKey: coins.marketName) {
+                mCoin = coins   
+            }else{
+                realm.add(coins, update: true)
             }
-            try! realm.write {
-                realm.add(coins, update:true)
-            }
-        })
+        }
     }
-
+    
+    
     
     func getFavoriteCoins() -> [CoinAttributes] {
         let realm = try! Realm()
-        let oldFavoriteCoins = realm.objects(CoinAttributes.self)
-
-//        let sortProperties = [SortDescriptor(keyPath: "marketName", ascending: true)]
-//        oldFavoriteCoins = oldFavoriteCoins.sorted(by: sortProperties)
-
-        return Array(oldFavoriteCoins)
+        return realm.objects(CoinAttributes.self).toArray() as! [CoinAttributes]
+    }
+    
+    func deleteFavoriteCoin(_ coin: CoinAttributes) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(coin)
+        }
+        
     }
     
     
     
-
+    
+    
+    
 }
 
 

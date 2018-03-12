@@ -77,7 +77,7 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
             if(self.shownArticles[indexPath.row].urlToImage!.count > 0){
                 let url = URL(string: self.shownArticles[indexPath.row].urlToImage!)
                 cell.newsImageView.image = nil
-                self.manager.loadImage(with: url!, into: cell.newsImageView)
+                (url != nil) ? (self.manager.loadImage(with: url!, into: cell.newsImageView)) : (cell.newsImageView.image = #imageLiteral(resourceName: "Icon-App-76x76-1"))
             }else{
                 cell.newsImageView.image = #imageLiteral(resourceName: "Icon-App-76x76-1")
             }

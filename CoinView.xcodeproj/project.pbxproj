@@ -34,6 +34,7 @@
 		71687C07201119D000269A02 /* CoinDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71687C06201119D000269A02 /* CoinDetailContract.swift */; };
 		71687C09201119DD00269A02 /* CoinDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71687C08201119DD00269A02 /* CoinDetailPresenter.swift */; };
 		71687C0B201119EE00269A02 /* CoinDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71687C0A201119EE00269A02 /* CoinDetailInteractor.swift */; };
+		717B78C72055709F00BD2966 /* CoinRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717B78C62055709F00BD2966 /* CoinRealmEntity.swift */; };
 		7182D7552039C3A900A7A096 /* FavoriteCoinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182D7542039C3A900A7A096 /* FavoriteCoinListViewController.swift */; };
 		7182D7572039C3B800A7A096 /* FavoriteCoinListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182D7562039C3B800A7A096 /* FavoriteCoinListPresenter.swift */; };
 		7182D7592039C3C300A7A096 /* FavoriteCoinListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7182D7582039C3C300A7A096 /* FavoriteCoinListInteractor.swift */; };
@@ -143,6 +144,7 @@
 		71687C06201119D000269A02 /* CoinDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailContract.swift; sourceTree = "<group>"; };
 		71687C08201119DD00269A02 /* CoinDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailPresenter.swift; sourceTree = "<group>"; };
 		71687C0A201119EE00269A02 /* CoinDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailInteractor.swift; sourceTree = "<group>"; };
+		717B78C62055709F00BD2966 /* CoinRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRealmEntity.swift; sourceTree = "<group>"; };
 		7182D7542039C3A900A7A096 /* FavoriteCoinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoinListViewController.swift; sourceTree = "<group>"; };
 		7182D7562039C3B800A7A096 /* FavoriteCoinListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoinListPresenter.swift; sourceTree = "<group>"; };
 		7182D7582039C3C300A7A096 /* FavoriteCoinListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoinListInteractor.swift; sourceTree = "<group>"; };
@@ -728,6 +730,7 @@
 			children = (
 				71FC6075200AC82000D49016 /* Coin.swift */,
 				71FC6076200AC82000D49016 /* CoinAttributes.swift */,
+				717B78C62055709F00BD2966 /* CoinRealmEntity.swift */,
 			);
 			name = Coins;
 			sourceTree = "<group>";
@@ -1068,6 +1071,7 @@
 				71FC6037200AC69C00D49016 /* MainCoinsViewController.swift in Sources */,
 				71687C03201119B300269A02 /* CoinDetailViewController.swift in Sources */,
 				71E370D4201672A1002859BF /* Source.swift in Sources */,
+				717B78C72055709F00BD2966 /* CoinRealmEntity.swift in Sources */,
 				71E370E0201677AF002859BF /* NewsListContract.swift in Sources */,
 				71E370D820167711002859BF /* NewsListViewController.swift in Sources */,
 				71687C09201119DD00269A02 /* CoinDetailPresenter.swift in Sources */,

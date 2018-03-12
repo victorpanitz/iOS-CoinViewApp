@@ -11,14 +11,15 @@ import ObjectMapper
 import Localize_Swift
 import RealmSwift
 
-class Coin:  Object, Mappable {
+class Coin:  Mappable {
     
-     var success = 0
-     var message: String?
-     var result : [CoinAttributes]?
+    var success = 0
+    var message: String?
+    var result = [CoinAttributes]()
     
     // MARK: Init methods
-    
+   
+
 
     convenience required init?(map: Map) {
         self.init()

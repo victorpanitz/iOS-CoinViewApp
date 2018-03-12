@@ -13,30 +13,29 @@ import RealmSwift
 
 class CoinAttributes: Object, Mappable {
     
-    @objc dynamic var marketCurrency: String?
-    @objc dynamic var baseCurrency: String?
-    @objc dynamic var marketCurrencyLong: String?
-    @objc dynamic var baseCurrencyLong: String?
-    @objc dynamic var minTradeSize:  Double = 0
-    @objc dynamic var marketName: String?
+    @objc dynamic var id: String? = nil
+    @objc dynamic var marketCurrency: String? = nil
+    @objc dynamic var baseCurrency: String? = nil
+    @objc dynamic var marketCurrencyLong: String? = nil
+    @objc dynamic var baseCurrencyLong: String? = nil
+    @objc dynamic var minTradeSize : Double = 0.0
+    @objc dynamic var marketName: String? = nil
     @objc dynamic var isActive = 0
-    @objc dynamic var created: Date?
-    @objc dynamic var notice: String?
+    @objc dynamic var created: Date? = nil
+    @objc dynamic var notice: String? = nil
     @objc dynamic var isSponsored = 0
-    @objc dynamic var logoUrl: String?
-    @objc dynamic var high: Double = 0
-    @objc dynamic var low: Double = 0
+    @objc dynamic var logoUrl: String? = nil
+    @objc dynamic var high : Double = 0.0
+    @objc dynamic var low : Double = 0.0
     @objc dynamic var volume = 0
-    @objc dynamic var last: Double = 0
+    @objc dynamic var last : Double = 0.0
     @objc dynamic var baseVolume = 0
-    @objc dynamic var timeStamp: Date?
-    @objc dynamic var bid: Double = 0
-    @objc dynamic var ask: Double = 0
+    @objc dynamic var timeStamp: Date? = nil
+    @objc dynamic var bid : Double = 0.0
+    @objc dynamic var ask : Double = 0.0
     @objc dynamic var openBuyOrders = 0
     @objc dynamic var openSellOrders = 0
-    @objc dynamic var prevDay: Double = 0
-    
-    // MARK: Init methods
+    @objc dynamic var prevDay : Double = 0.0
     
     
     override static func primaryKey() -> String? {
@@ -76,6 +75,6 @@ class CoinAttributes: Object, Mappable {
         openSellOrders <- map["OpenSellOrders"]
         prevDay <- map["PrevDay"]
         
-
+        
     }
 }

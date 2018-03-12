@@ -8,12 +8,12 @@
 import RealmSwift
 
 extension Results {
-    
-//    func toArray() -> [T] {
-//        var array = [T]()
-//        for result in self {
-//            array.append(result)
-//        }
-//        return array
-//    }
+
+    func toArray () -> [Object] {
+        var array = [Object]()
+        for result in self {
+            array.append(result as! Object)
+        }
+        return array
+    }
 }

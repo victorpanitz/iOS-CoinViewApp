@@ -14,7 +14,7 @@ protocol FavoriteCoinListView: BaseView {
 }
 
 protocol FavoriteCoinListPresentation: class {
-    func retrieveCoinsFromRealm()
+    func retrieveCoins()
     func showCoinDetail(_ coinAttributes: CoinAttributes)
 }
 

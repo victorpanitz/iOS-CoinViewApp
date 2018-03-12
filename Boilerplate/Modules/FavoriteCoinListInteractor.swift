@@ -16,13 +16,13 @@ class FavoriteCoinListInteractor {
     
     weak var output: FavoriteCoinListInteractorOutput?
     var apiDataManager = CoinApiDataManager()
-    var localDataManager = ProfileLocalDataManager()
+    var localDataManager = CoinsLocalDataManager()
     
 }
 
 extension FavoriteCoinListInteractor: FavoriteCoinListUseCase {
     func retrieveCoins() {
-        return
+        var favoriteCoins = self.localDataManager.getFavoriteCoins()
     }
     
    

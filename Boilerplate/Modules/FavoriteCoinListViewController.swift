@@ -62,6 +62,7 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
         
         hideKeyboardWhenTappedAround()
         //retrieve favorite Coins
+        presenter?.retrieveCoins()
     }
     
     

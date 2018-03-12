@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
 
 
 class MainSearchPresenter {
@@ -21,6 +23,7 @@ class MainSearchPresenter {
 
 extension MainSearchPresenter: MainSearchPresentation {
     func saveCoin(_ coin: CoinAttributes) {
+        coin.id = String(Int(NSDate().timeIntervalSince1970))
         interactor?.saveCoin(coin)
     }
     
@@ -43,6 +46,10 @@ extension MainSearchPresenter: MainSearchPresentation {
 }
 
 extension MainSearchPresenter: MainSearchInteractorOutput {
+    func onCoinSaved(coins: [CoinAttributes]) {
+        view?.showMessage(coins[coins.count - 1].marketCurrencyLong, withTitle: "Moeda")
+    }
+    
     func showMessage(message: String, title: String) {
         view?.hideLoading()
         view?.showMessage(message, withTitle: title)

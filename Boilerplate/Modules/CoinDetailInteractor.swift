@@ -28,7 +28,7 @@ extension CoinDetailInteractor: CoinDetailUseCase {
     func retrieveCoins(marketName: String) {
         self.apiDataManager.fetchCoinDetail(marketName ,success: { (coins) in
             var mCoins = [CoinAttributes]()
-            coins?.result?.forEach({mAttributes in
+            coins?.result.forEach({mAttributes in
                 mCoins.append(mAttributes)
             })
             if (mCoins.count > 0){

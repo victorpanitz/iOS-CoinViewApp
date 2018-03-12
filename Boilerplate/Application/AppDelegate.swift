@@ -16,11 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        DispatchQueue.main.async {
-            Thread.sleep(forTimeInterval: 3.0)
-
-        }
-            
+      
         self.setupNavigationBarFont()
         self.setupBackButtonAppearance()
         self.presentInitialScreen()
