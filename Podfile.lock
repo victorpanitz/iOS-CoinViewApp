@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.6.0)
+  - Alamofire (4.7.0)
   - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
@@ -55,7 +55,7 @@ PODS:
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.6.0)
+  - Alamofire (~> 4.7.0)
   - AlamofireObjectMapper (~> 5.0.0)
   - Crashlytics
   - Fabric
@@ -75,7 +75,7 @@ DEPENDENCIES:
   - UIColor_Hex_Swift (~> 3.0.1)
 
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
   Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
   Fabric: 9cd6a848efcf1b8b07497e0b6a2e7d336353ba15
@@ -101,6 +101,6 @@ SPEC CHECKSUMS:
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 7417561989e5091422b554c6cf2c70ac1a041b96
+PODFILE CHECKSUM: eca559c07c6ed2f53291adf1f6cf5c68b71c48fe
 
 COCOAPODS: 1.4.0.rc.1

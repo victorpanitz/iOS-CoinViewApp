@@ -53,7 +53,7 @@ extension NewsListInteractor: NewsListUseCase {
                     self.output?.showMessage(message: "Verify your connection.", title: "Ops!")
                 }
             }, failure: { (error) in
-                self.output?.showMessage(message: error.localizedDescription, title: "Ops!")
+                self.output?.showMessage(message: error!, title: "Ops!")
             })
         } else {
             self.output?.showMessage(message: "Verify your connection.", title: "Ops!")

@@ -97,21 +97,7 @@
 		E1164E4B1EF35DCF00B9B565 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1164E4A1EF35DCF00B9B565 /* StoryboardLoadable.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		33791C8F1E11C313003CAC9D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		0FC14883EEB97F91D4E3FD81 /* Pods_Boilerplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boilerplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		332288801DD282D5001042CE /* BaseContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseContract.swift; path = Base/Contract/BaseContract.swift; sourceTree = "<group>"; };
 		3322888E1DD283CF001042CE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Base/View/BaseViewController.swift; sourceTree = "<group>"; };
 		3328AE5E1DF9DB1D0067C544 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
@@ -126,7 +112,6 @@
 		33CAF4D81DD75BDD00465298 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Application/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33D965901E946693001EDF07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets/Images/Assets.xcassets; sourceTree = "<group>"; };
 		391BDC4774D9223581C92E47 /* Pods_CoinView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		447304C35B86016CFCC9F1B8 /* Pods-Boilerplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boilerplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boilerplate/Pods-Boilerplate.debug.xcconfig"; sourceTree = "<group>"; };
 		704BA78CCA8CF426BAC110D3 /* Pods-CoinView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoinView/Pods-CoinView.debug.xcconfig"; sourceTree = "<group>"; };
 		7113A603205884F2006EE760 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		715787CC2016169C00DE5355 /* TabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContract.swift; sourceTree = "<group>"; };
@@ -172,7 +157,6 @@
 		71FC6075200AC82000D49016 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		71FC6076200AC82000D49016 /* CoinAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinAttributes.swift; sourceTree = "<group>"; };
 		71FC6079200AC84100D49016 /* CoinApiDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinApiDataManager.swift; sourceTree = "<group>"; };
-		BE35B33DF9C7E5EC7BB99631 /* Pods-Boilerplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boilerplate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boilerplate/Pods-Boilerplate.release.xcconfig"; sourceTree = "<group>"; };
 		E1164E0E1EF35D0400B9B565 /* DataResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
 		E1164E0F1EF35D0400B9B565 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		E1164E101EF35D0400B9B565 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -222,8 +206,6 @@
 		3067B7B1ED1EEAB4158768D4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				447304C35B86016CFCC9F1B8 /* Pods-Boilerplate.debug.xcconfig */,
-				BE35B33DF9C7E5EC7BB99631 /* Pods-Boilerplate.release.xcconfig */,
 				704BA78CCA8CF426BAC110D3 /* Pods-CoinView.debug.xcconfig */,
 				F59CA8790A28B012B61C77D4 /* Pods-CoinView.release.xcconfig */,
 			);
@@ -544,7 +526,6 @@
 		3A2F7912797271B209F2D933 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0FC14883EEB97F91D4E3FD81 /* Pods_Boilerplate.framework */,
 				391BDC4774D9223581C92E47 /* Pods_CoinView.framework */,
 			);
 			name = Frameworks;
@@ -828,7 +809,6 @@
 				33B53F191DD0ECD500462C66 /* Frameworks */,
 				33B53F1A1DD0ECD500462C66 /* Resources */,
 				330525391DD66015001BE57F /* ShellScript */,
-				33791C8F1E11C313003CAC9D /* Embed Frameworks */,
 				62BCCD5172FB8FFC3BA51607 /* [CP] Embed Pods Frameworks */,
 				43FF0823C8F76FDCC21C47EB /* [CP] Copy Pods Resources */,
 			);
@@ -928,20 +908,21 @@
 		};
 		330525391DD66015001BE57F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "";
+			showEnvVarsInLog = 0;
 		};
 		43FF0823C8F76FDCC21C47EB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -956,7 +937,7 @@
 		};
 		62BCCD5172FB8FFC3BA51607 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -1150,7 +1131,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1198,7 +1179,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

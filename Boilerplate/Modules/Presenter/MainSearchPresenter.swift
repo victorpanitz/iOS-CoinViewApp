@@ -22,6 +22,10 @@ class MainSearchPresenter {
 }
 
 extension MainSearchPresenter: MainSearchPresentation {
+    func doSomething() {
+        print("hibug")
+    }
+    
     func saveCoin(_ coin: CoinAttributes) {
         coin.id = String(Int(NSDate().timeIntervalSince1970))
         interactor?.saveCoin(coin)
