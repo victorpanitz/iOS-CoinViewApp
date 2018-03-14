@@ -40,6 +40,7 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
         self.mTableView.delegate = self
         self.mTableView.dataSource = self
         self.mTableView.allowsMultipleSelection = false
+        self.mTableView.tableFooterView = UIView()
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.red
@@ -61,9 +62,11 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
             .disposed(by: disposeBag)
         
         hideKeyboardWhenTappedAround()
-        presenter?.retrieveCoins()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        presenter?.retrieveCoins()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -72,6 +75,7 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        self.mSearchBar.text = nil
         removeKeyboardNotification()
     }
     
@@ -81,7 +85,7 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        let moreRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Favorite", handler:{action, indexpath in
+        let moreRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "  Pump  ", handler:{action, indexpath in
             for i in 1...20 {
                 self.generateFavoriteAnimation()
             }
@@ -160,7 +164,6 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
         }
         
             self.mTableView.reloadData()
-            //self.mTableView.scrollsToTop = true
             self.mTableView.tableFooterView = UIView(frame: .zero)
         
     }
@@ -203,12 +206,12 @@ class MainSearchViewController: BaseViewController, StoryboardLoadable, UITableV
 
 func customPath() -> UIBezierPath{
     let path = UIBezierPath()
-    path.move(to: CGPoint(x:0,y: 1200))
-    let endpoint = CGPoint(x: 800, y: 500)
+    path.move(to: CGPoint(x:0,y: 700))
+    let endpoint = CGPoint(x: 700, y: 0)
     
     let randomYShift = 200 + drand48() * 800
-    let cp1 = CGPoint(x: 100, y: 100 - randomYShift)
-    let cp2 = CGPoint(x: 200, y: 300 + randomYShift)
+    let cp1 = CGPoint(x: 100, y: 400 - randomYShift)
+    let cp2 = CGPoint(x: 50, y: 600 + randomYShift)
     
     path.addCurve(to: endpoint, controlPoint1: cp1, controlPoint2: cp2)
     return path

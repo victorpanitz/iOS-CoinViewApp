@@ -26,20 +26,7 @@ class MainSearchInteractor {
 
 extension MainSearchInteractor: MainSearchUseCase {
     func saveCoin(_ coin: CoinAttributes) {
-
-//        let mCoins2: [CoinAttributes] = self.coinLocalDataManager.getFavoriteCoins()
-        print(" ANTES ANTES \n")
-        
         self.coinLocalDataManager.saveFavoriteCoins(coin)
-
-        
-        let mCoins: [CoinAttributes] = self.coinLocalDataManager.getFavoriteCoins()
-        print(" DEPOIS DEPOIS \(mCoins))\n")
-        
-//        output?.onCoinSaved(coins: self.coinLocalDataManager.getFavoriteCoins())
-        
-
-        
     }
     
     func retrieveCoins() {

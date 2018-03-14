@@ -30,7 +30,7 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
     
     // MARK: Lifecycle
     @IBOutlet var mTableView: UITableView!
-    @IBOutlet var mSearchBar: UISearchBar!
+    @IBOutlet var mNewsSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +39,14 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
         self.mTableView.delegate = self
         self.mTableView.dataSource = self
         self.mTableView.allowsMultipleSelection = false
+        self.mTableView.tableFooterView = UIView()
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor.red
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        mSearchBar.placeholder = "Filter"
-        mSearchBar
+        mNewsSearchBar.placeholder = "Filter"
+        mNewsSearchBar
             .rx.text // Observable property thanks to RxCocoa
             .orEmpty // Make it non-optional
             .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
@@ -59,7 +60,12 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
             })
             .disposed(by: disposeBag)
         
-        presenter?.setRealtimeObserver()
+        if Connectivity.isConnectedToInternet() {
+            presenter?.setRealtimeObserver()
+        }else{
+            self.hideLoading()
+            self.showMessage("No Internet. Verify your connection.", withTitle: "Ops!")
+        }
         hideKeyboardWhenTappedAround()
     }
     
@@ -108,6 +114,7 @@ class NewsListViewController: BaseViewController, StoryboardLoadable, UITableVie
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        self.mNewsSearchBar.text = nil
         removeKeyboardNotification()
     }
     
@@ -143,7 +150,7 @@ extension  NewsListViewController: NewsListView {
         }else{
             self.mArticles = news
             self.shownArticles = self.mArticles
-            self.mSearchBar.text = nil
+            self.mNewsSearchBar.text = nil
             self.mTableView.reloadData()
         }
         

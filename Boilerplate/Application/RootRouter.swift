@@ -19,13 +19,7 @@ class RootRouter: NSObject {
         guard let window = UIApplication.shared.delegate?.window! else { return }
         window.backgroundColor = UIColor.white
         window.makeKeyAndVisible()
-//
-//        let defaults = UserDefaults.standard
-//        defaults.set([], forKey: "categoriesID")
-//        defaults.set(nil, forKey: "orderByLogic")
-//        defaults.set([], forKey: "paymentTypes")
-//        defaults.set([], forKey: "cardFilters")
-//        defaults.set(false, forKey: "onlinePayment")
+
 
         let tabBarController = TabBarController()
         tabBarController.viewControllers = TabBarRouter.setNavigation()

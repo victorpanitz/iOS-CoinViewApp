@@ -36,18 +36,13 @@ extension MainSearchPresenter: MainSearchPresentation {
         interactor?.retrieveCoins()
     }
     
-    
-    func doSomething() {
-        view?.showMessage("I'm doing something!!", withTitle: "Hey")
-    }
-    
     //TODO: Implement other methods from presenter->view here
     
 }
 
 extension MainSearchPresenter: MainSearchInteractorOutput {
     func onCoinSaved(coins: [CoinAttributes]) {
-        view?.showMessage(coins[coins.count - 1].marketCurrencyLong, withTitle: "Moeda")
+//        interactor?.retrieveCoins()
     }
     
     func showMessage(message: String, title: String) {

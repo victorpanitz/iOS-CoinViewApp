@@ -19,22 +19,29 @@ class FavoriteCoinListPresenter {
 }
 
 extension FavoriteCoinListPresenter: FavoriteCoinListPresentation {
+    func removeFavoriteCoin(coin: CoinAttributes) {
+        interactor?.removeFavoriteCoin(coin: coin)
+    }
+    
     func retrieveCoins() {
         interactor?.retrieveCoins()
     }
     
     func showCoinDetail(_ coinAttributes: CoinAttributes) {
-        return
+        router?.showCoinDetail(coinAttributes)
     }
-    
-   
     
 }
 
 extension FavoriteCoinListPresenter: FavoriteCoinListInteractorOutput {
-//    func showMessage(message: String, title: String) {
-//        view?.hideLoading()
-//        view?.showMessage(message, withTitle: title)
-//    }
+    func onCoinRemoved() {
+        interactor?.retrieveCoins()
+    }
+    
+    func onCoinsRetrieved(coins: [CoinAttributes]) {
+        view?.updateCoinTable(coins: coins)
+    }
+    
+    
     
 }

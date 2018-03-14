@@ -39,20 +39,26 @@ extension NewsListInteractor: NewsListUseCase {
             self.output?.hideLoading()
         }) { (error) in
             self.output?.showMessage(message: error.localizedDescription, title: "Ops!")
+            self.output?.hideLoading()
         }
     }
     
     func fetchNews() {
-        self.apiDataManager.fetchRecentNews(success: {(crypto) in
-            if let news = crypto{
-                print("@@@@@@@")
-                self.output?.whenNewsFetched(news: news)
-            }else{
-                print("@@@@@@@")
-            }
-        }, failure: { (error) in
-            print(error!)
-        })
+        if Connectivity.isConnectedToInternet() {
+            self.apiDataManager.fetchRecentNews(success: {(crypto) in
+                if let news = crypto{
+                    print("@@@@@@@")
+                    self.output?.whenNewsFetched(news: news)
+                }else{
+                    self.output?.showMessage(message: "Verify your connection.", title: "Ops!")
+                }
+            }, failure: { (error) in
+                self.output?.showMessage(message: error.localizedDescription, title: "Ops!")
+            })
+        } else {
+            self.output?.showMessage(message: "Verify your connection.", title: "Ops!")
+        }
+       
     }
     
 }

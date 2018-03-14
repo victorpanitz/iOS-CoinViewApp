@@ -5,7 +5,7 @@ inhibit_all_warnings!
 target 'CoinView' do
 pod 'Firebase/Database'
 pod 'Firebase/Core'
-pod 'MBProgressHUD', '~> 1.0.0'
+pod 'MBProgressHUD', '~> 1.1.0'
   pod 'UIColor_Hex_Swift', '~> 3.0.1'
   pod 'NextResponderTextField'
   pod 'Localize-Swift', '~> 1.6'

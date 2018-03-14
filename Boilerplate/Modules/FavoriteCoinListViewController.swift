@@ -13,11 +13,9 @@ import RxCocoa
 
 class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UITableViewDelegate, UITableViewDataSource {
     
-    
     var manager = Nuke.Manager.shared
     var mCoins : [CoinAttributes] = []
     var mShownCoins : [CoinAttributes] = []
-    var mCoinReferenced: [CoinAttributes] = []
     
     //CRIAR DATA E SHOWN DATA PARA TER AS INFORMACOES APOS APAGAR O FILTRO
     let disposeBag = DisposeBag()
@@ -27,8 +25,7 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
     
     // MARK: IBOutlets
     
-    @IBOutlet var sectionReferenceFilter: UISegmentedControl!
-    @IBOutlet var mSearchBar: UISearchBar!
+    @IBOutlet var mFavSearchBar: UISearchBar!
     @IBOutlet weak var mTableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -40,19 +37,20 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
         self.mTableView.delegate = self
         self.mTableView.dataSource = self
         self.mTableView.allowsMultipleSelection = false
-        
+        self.mTableView.tableFooterView = UIView()
+
             self.navigationController?.navigationBar.isTranslucent = false
             self.navigationController?.navigationBar.barTintColor = UIColor.red
             self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        mSearchBar.placeholder = "Filter"
-        mSearchBar
+        mFavSearchBar.placeholder = "Filter"
+        mFavSearchBar
             .rx.text // Observable property thanks to RxCocoa
             .orEmpty // Make it non-optional
             .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
             .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
             .subscribe(onNext: { [unowned self] query in // Here we subscribe to every new value
-                self.mShownCoins = self.mCoinReferenced.filter {  ($0.marketCurrencyLong!.hasPrefix(query))}
+                self.mShownCoins = self.mCoins.filter {  ($0.marketCurrencyLong!.hasPrefix(query))}
                 self.mShownCoins.sort { (first, next) -> Bool in
                     return first.marketCurrencyLong!.compare(next.marketCurrencyLong!) == .orderedAscending
                 }
@@ -61,10 +59,11 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
             .disposed(by: disposeBag)
         
         hideKeyboardWhenTappedAround()
-        //retrieve favorite Coins
-        presenter?.retrieveCoins()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        presenter?.retrieveCoins()
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -73,6 +72,7 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        self.mFavSearchBar.text = nil
         removeKeyboardNotification()
     }
     
@@ -82,12 +82,15 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        let moreRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Favorite", handler:{action, indexpath in
-//            for i in 1...20 {
-//                self.generateFavoriteAnimation()
-//            }
+        let moreRowAction = UITableViewRowAction(style: UITableViewRowActionStyle.destructive, title: "  Dump  ", handler:{action, indexpath in
+            if let coin: CoinAttributes = self.mShownCoins[indexPath.row] {
+                self.presenter?.removeFavoriteCoin(coin: coin)
+                for i in 1...40 {
+                    self.generateFavoriteAnimation()
+                }
+            }
         })
-        moreRowAction.backgroundColor = UIColor.black
+//        moreRowAction.backgroundColor = UIColor.red
         return [moreRowAction]
     }
     
@@ -120,47 +123,8 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
         }
     }
     
-    // MARK: IBActions
-    
-    
-    @IBAction func sectionReferenceChanged(_ sender: UISegmentedControl) {
-        mSearchBar.text = ""
-        setupReference()
-    }
     
     // MARK: Private
-    
-    private func setupReference(){
-        switch sectionReferenceFilter.selectedSegmentIndex {
-        case 0:
-            self.mCoinReferenced = self.mCoins.filter {  ($0.baseCurrency!.hasPrefix("BTC"))}
-            self.mCoinReferenced.sort { (first, next) -> Bool in
-                return first.marketCurrencyLong!.compare(next.marketCurrencyLong!) == .orderedAscending
-            }
-            self.mShownCoins = self.mCoinReferenced
-            
-        case 1:
-            self.mCoinReferenced = self.mCoins.filter {  ($0.baseCurrency!.hasPrefix("ETH"))}
-            self.mCoinReferenced.sort { (first, next) -> Bool in
-                return first.marketCurrencyLong!.compare(next.marketCurrencyLong!) == .orderedAscending
-            }
-            self.mShownCoins = self.mCoinReferenced
-            
-        case 2:
-            self.mCoinReferenced = self.mCoins.filter {  ($0.baseCurrency!.hasPrefix("USDT"))}
-            self.mCoinReferenced.sort { (first, next) -> Bool in
-                return first.marketCurrencyLong!.compare(next.marketCurrencyLong!) == .orderedAscending
-            }
-            self.mShownCoins = self.mCoinReferenced
-            
-        default:
-            break
-        }
-        
-        self.mTableView.reloadData()
-        self.mTableView.tableFooterView = UIView(frame: .zero)
-        
-    }
     
     
     func moveToNextField(_ view: UIView, nextFieldTag: Int) {
@@ -171,19 +135,64 @@ class FavoriteCoinListViewController: BaseViewController, StoryboardLoadable, UI
             view.resignFirstResponder()
         }
     }
+    
+    fileprivate func generateFavoriteAnimation(){
+        
+        let aleatory = drand48()
+        var imageView = UIImageView()
+        imageView = aleatory > 0.5 ? UIImageView(image: #imageLiteral(resourceName: "star")) : UIImageView(image: #imageLiteral(resourceName: "coin"))
+        
+        let dimension = 20 + drand48() * 10
+        imageView.frame = CGRect(x: 0, y: 0, width: dimension, height: dimension)
+        
+        let animation = CAKeyframeAnimation(keyPath: "position")
+        
+        animation.path = customPath2().cgPath
+        animation.duration = 3 + drand48() * 5
+        animation.fillMode = kCAFillModeForwards
+        animation.isRemovedOnCompletion = false
+        animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+        
+        imageView.layer.add(animation, forKey: nil)
+        view.addSubview(imageView)
+        
+    }
 
     
 }
 
+func customPath2() -> UIBezierPath{
+    let path = UIBezierPath()
+    
+    path.move(to: CGPoint(x:500,y: 0))
+    let endpoint = CGPoint(x: -300, y: 700)
+    
+    let randomYShift = 200 + drand48() * 800
+    let cp1 = CGPoint(x: 400, y: 100 - randomYShift)
+    let cp2 = CGPoint(x: 600, y: 50 + randomYShift)
+    
+    path.addCurve(to: endpoint, controlPoint1: cp1, controlPoint2: cp2)
+    return path
+}
+
+class CurvedView2: UIView{
+    override func draw(_ rect: CGRect) {
+        let path = customPath2()
+        path.lineWidth = 3
+        path.stroke()
+    }
+}
 
 
 extension  FavoriteCoinListViewController: FavoriteCoinListView {
-    func updateCoinTable(mCoins: [CoinAttributes]) {
-        return
+    func updateCoinTable(coins: [CoinAttributes]) {
+        self.mCoins = coins
+        self.mShownCoins = mCoins
+        self.mShownCoins.sort { (first, next) -> Bool in
+            return first.marketCurrencyLong!.compare(next.marketCurrencyLong!) == .orderedAscending
+        }
+        mTableView.reloadData()
     }
-    
-    
-   
     
 }
 

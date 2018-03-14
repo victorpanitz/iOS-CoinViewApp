@@ -11,17 +11,29 @@ import RealmSwift
 import Realm
 
 class CoinsLocalDataManager: NSObject {
+    let realm = try! Realm()
+
     
     func saveFavoriteCoins(_ coins: CoinAttributes){
-        let realm = try! Realm()
-        try! realm.write {
+        
+        if !realm.isInWriteTransaction{
+            realmWrite(coins)
+        }else{
+            realm.cancelWrite()
+            realmWrite(coins)
             
+        }
+    }
+    
+    private func realmWrite(_ coins: CoinAttributes){
+        try! realm.write {
             if var mCoin: CoinAttributes = realm.object(ofType: CoinAttributes.self, forPrimaryKey: coins.marketName) {
-                mCoin = coins   
+                mCoin = coins
             }else{
                 realm.add(coins, update: true)
             }
         }
+        
     }
     
     

@@ -37,6 +37,7 @@ class CoinDetailViewController: BaseViewController, StoryboardLoadable, UITableV
         
         self.mTableView.delegate = self
         self.mTableView.dataSource = self
+        self.mTableView.tableFooterView = UIView()
         setupView()
         
         if let marketName = mCoin?.marketName {

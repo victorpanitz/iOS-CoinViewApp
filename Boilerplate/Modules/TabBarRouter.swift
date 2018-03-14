@@ -60,7 +60,7 @@ extension TabBarRouter: TabBarWireframe {
         let navigationNewsListTabBarItem = UITabBarItem(title: "Last News", image: UIImage(named: "News-29x29-1"), selectedImage: UIImage(named: "News-29x29-1"))
         navigationNewsList.tabBarItem = navigationNewsListTabBarItem
         
-        let favoriteCoinList = NewsListRouter.setupModule()
+        let favoriteCoinList = FavoriteCoinListRouter.setupModule()
         let navigationFavoriteCoinList = UINavigationController()
         navigationFavoriteCoinList.navigationBar.isHidden = true
         navigationFavoriteCoinList.viewControllers = [favoriteCoinList]

@@ -10,20 +10,25 @@ import Foundation
 
 
 protocol FavoriteCoinListView: BaseView {
-    func updateCoinTable(mCoins: [CoinAttributes])
+    func updateCoinTable(coins: [CoinAttributes])
 }
 
 protocol FavoriteCoinListPresentation: class {
     func retrieveCoins()
+    func removeFavoriteCoin(coin: CoinAttributes)
     func showCoinDetail(_ coinAttributes: CoinAttributes)
 }
 
 protocol FavoriteCoinListUseCase: class {
+    func removeFavoriteCoin(coin: CoinAttributes)
     func retrieveCoins()
 }
 
 protocol FavoriteCoinListInteractorOutput: class {
+    func onCoinRemoved()
+    func onCoinsRetrieved(coins: [CoinAttributes])
 }
 
 protocol FavoriteCoinListWireframe: class {
+    func showCoinDetail(_ coinAttributes: CoinAttributes)
 }

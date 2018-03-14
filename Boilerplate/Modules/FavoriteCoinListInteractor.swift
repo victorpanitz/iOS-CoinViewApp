@@ -21,8 +21,14 @@ class FavoriteCoinListInteractor {
 }
 
 extension FavoriteCoinListInteractor: FavoriteCoinListUseCase {
+    func removeFavoriteCoin(coin: CoinAttributes) {
+        self.localDataManager.deleteFavoriteCoin(coin)
+        output?.onCoinRemoved()
+    }
+    
     func retrieveCoins() {
         var favoriteCoins = self.localDataManager.getFavoriteCoins()
+        output?.onCoinsRetrieved(coins: favoriteCoins)
     }
     
    

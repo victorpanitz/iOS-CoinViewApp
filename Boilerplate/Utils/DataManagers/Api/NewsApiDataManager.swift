@@ -20,47 +20,75 @@ class NewsApiDataManager: NSObject {
     //TODO: Implement API requests here
     //TODO: Requestes related to User, Profile, CompanyProfile and similar entities can be implemented here
     
-    let center = URLSessionConfiguration.default
-    var alamoFireManager : Alamofire.SessionManager?
-    override init() {
-        let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 10
-        configuration.timeoutIntervalForResource = 10
-         self.alamoFireManager = Alamofire.SessionManager(configuration: configuration)
-    }
+    var alamoFireManager = Alamofire.SessionManager.default
+    
+    
+    //    let manager : SessionManager = {
+    //        let config = URLSessionConfiguration.default
+    //        config.timeoutIntervalForRequest = 5
+    //        config.timeoutIntervalForResource = 5
+    //        let mgr = Alamofire.SessionManager(configuration: config)
+    //
+    //        return mgr
+    //    }()
+    
     
     func fetchTopNews(success: @escaping ((_ cryptoNews: CryptoNews?) -> ()), failure: ((_ error: String?) -> Void)?) {
         //guard let header = SessionHelper.shared.authorizationHeader else { return }
-        
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 4 // seconds
+        configuration.timeoutIntervalForResource = 4
+        alamoFireManager = Alamofire.SessionManager(configuration: configuration)
         let url = Constants.URL.topCryptoNews
-        self.alamoFireManager!
+        self.alamoFireManager
             .request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseObject(completionHandler: { (response: DataResponse<CryptoNews>) in
                 self.responseAPI(url, response.response?.statusCode, response.data!, success: {
                     success(response.result.value)
                 }, failure: { (error) in
-                    failure!(error)
+                    if let err = error as? URLError, err.code  == URLError.Code.notConnectedToInternet
+                    {
+                        print("SEM INTERNET")                    }
+                    else
+                    {
+                        // Other errors
+                        failure!(error)
+                        print("SEM INTERNET")
+                        
+                    }
                 })
             })
-        }
+    }
     
     func fetchRecentNews(success: @escaping ((_ cryptoNews: CryptoNews?) -> ()), failure: ((_ error: String?) -> Void)?) {
         //guard let header = SessionHelper.shared.authorizationHeader else { return }
-       
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 4 // seconds
+        configuration.timeoutIntervalForResource = 4
+        alamoFireManager = Alamofire.SessionManager(configuration: configuration)
         let url = Constants.URL.recentCryptoNews
-        self.alamoFireManager!
+        self.alamoFireManager
             .request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseObject(completionHandler: { (response: DataResponse<CryptoNews>) in
                 self.responseAPI(url, response.response?.statusCode, response.data!, success: {
                     success(response.result.value)
                 }, failure: { (error) in
+                    if let err = error as? URLError, err.code == .notConnectedToInternet {
+                        // no internet connection
+                        print(error)
+                        print("CAPTURADO1")
+                    } else {
+                        // other failures
+                        print("CAPTURADO2")
+
+                    }
                     failure!(error)
                 })
             })
     }
     
-
- 
+    
+    
     
     ////////////////////  Global Fuctions ////////////////////////////
     
@@ -68,6 +96,7 @@ class NewsApiDataManager: NSObject {
         var logger = "URL: \(url) - code: \(statusCode ?? 0) "
         if statusCode != 200 {  logger += self.loggerError(data:data)}
         guard let statusCode = statusCode else {
+            print("SEM INTERNET")
             failure!(self.showError(data: data))
             return
         }
@@ -76,6 +105,7 @@ class NewsApiDataManager: NSObject {
             success!()
             return
         default:
+            print("SEM INTERNET")
             failure!(self.showError(data: data))
             return
         }
@@ -99,6 +129,6 @@ class NewsApiDataManager: NSObject {
         }
         return errorString
     }
-
+    
     
 }

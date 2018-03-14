@@ -65,7 +65,7 @@ extension NewsListPresenter: NewsListInteractorOutput {
         for pos in 0...articles.count {
             if let article = articles["article\(pos)"] as? [String : AnyHashable]{
                 var mArticle = Articles()
-                print("\(article)")
+                
                 mArticle.author = article["author"] as! String
                 mArticle.description = article["description"] as! String
                 mArticle.title = article["title"] as! String

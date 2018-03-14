@@ -14,15 +14,13 @@
 		3328AE651DF9ED590067C544 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328AE641DF9ED590067C544 /* ReusableView.swift */; };
 		332F1C871DD33A790080B38D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F1C841DD33A790080B38D /* AppDelegate.swift */; };
 		332F1C891DD33A790080B38D /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F1C861DD33A790080B38D /* RootRouter.swift */; };
-		337EB0761DD39BCB00733F9C /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0731DD39BCB00733F9C /* SanFranciscoText-Light.otf */; };
-		337EB0771DD39BCB00733F9C /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0741DD39BCB00733F9C /* SanFranciscoText-Medium.otf */; };
-		337EB0781DD39BCB00733F9C /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 337EB0751DD39BCB00733F9C /* SanFranciscoText-Regular.otf */; };
 		33B53F251DD0ECD500462C66 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		33BE59961E36CCB4000661F6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE59951E36CCB4000661F6 /* UserProfile.swift */; };
 		33BE59981E36CD07000661F6 /* ResponseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BE59971E36CD07000661F6 /* ResponseErrors.swift */; };
 		33CAF4D41DD75AF600465298 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33CAF4D61DD75AF600465298 /* Localizable.strings */; };
 		33CAF4D91DD75BDD00465298 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CAF4D81DD75BDD00465298 /* LaunchScreen.storyboard */; };
 		33D965911E946693001EDF07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D965901E946693001EDF07 /* Assets.xcassets */; };
+		7113A604205884F2006EE760 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113A603205884F2006EE760 /* Connectivity.swift */; };
 		715787CD2016169C00DE5355 /* TabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715787CC2016169C00DE5355 /* TabBarContract.swift */; };
 		715787CF201616AC00DE5355 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715787CE201616AC00DE5355 /* TabBarRouter.swift */; };
 		715787D1201616C500DE5355 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715787D0201616C500DE5355 /* TabBarPresenter.swift */; };
@@ -120,9 +118,6 @@
 		3328AE641DF9ED590067C544 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		332F1C841DD33A790080B38D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
 		332F1C861DD33A790080B38D /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootRouter.swift; path = Application/RootRouter.swift; sourceTree = "<group>"; };
-		337EB0731DD39BCB00733F9C /* SanFranciscoText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-Light.otf"; path = "Resources/SanFranciscoText-Light.otf"; sourceTree = "<group>"; };
-		337EB0741DD39BCB00733F9C /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-Medium.otf"; path = "Resources/SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
-		337EB0751DD39BCB00733F9C /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SanFranciscoText-Regular.otf"; path = "Resources/SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
 		33B53F1C1DD0ECD500462C66 /* CoinView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B53F2B1DD0ECD500462C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33BE59951E36CCB4000661F6 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = Entities/UserProfile/UserProfile.swift; sourceTree = "<group>"; };
@@ -133,6 +128,7 @@
 		391BDC4774D9223581C92E47 /* Pods_CoinView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		447304C35B86016CFCC9F1B8 /* Pods-Boilerplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boilerplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boilerplate/Pods-Boilerplate.debug.xcconfig"; sourceTree = "<group>"; };
 		704BA78CCA8CF426BAC110D3 /* Pods-CoinView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoinView/Pods-CoinView.debug.xcconfig"; sourceTree = "<group>"; };
+		7113A603205884F2006EE760 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		715787CC2016169C00DE5355 /* TabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContract.swift; sourceTree = "<group>"; };
 		715787CE201616AC00DE5355 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		715787D0201616C500DE5355 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
@@ -257,7 +253,6 @@
 		3322884F1DD2633B001042CE /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				337EB0721DD39BBD00733F9C /* Fonts */,
 				332288511DD26352001042CE /* Images */,
 				332288501DD2634A001042CE /* Strings */,
 			);
@@ -341,6 +336,7 @@
 			children = (
 				E1164E381EF35D4D00B9B565 /* SessionHelper.swift */,
 				E1164E391EF35D4D00B9B565 /* ValidatorHelper.swift */,
+				7113A603205884F2006EE760 /* Connectivity.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -402,16 +398,6 @@
 				33BE59941E36CC54000661F6 /* UserProfile */,
 			);
 			name = Entities;
-			sourceTree = "<group>";
-		};
-		337EB0721DD39BBD00733F9C /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				337EB0731DD39BCB00733F9C /* SanFranciscoText-Light.otf */,
-				337EB0741DD39BCB00733F9C /* SanFranciscoText-Medium.otf */,
-				337EB0751DD39BCB00733F9C /* SanFranciscoText-Regular.otf */,
-			);
-			name = Fonts;
 			sourceTree = "<group>";
 		};
 		33B3BBF01DE9B69C003ADD4C /* Delegates */ = {
@@ -904,8 +890,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				337EB0781DD39BCB00733F9C /* SanFranciscoText-Regular.otf in Resources */,
-				337EB0761DD39BCB00733F9C /* SanFranciscoText-Light.otf in Resources */,
 				7182D75F2039C8C400A7A096 /* FavoriteCoinList.storyboard in Resources */,
 				33D965911E946693001EDF07 /* Assets.xcassets in Resources */,
 				71E370E62016D189002859BF /* MainSearch.storyboard in Resources */,
@@ -916,7 +900,6 @@
 				33CAF4D41DD75AF600465298 /* Localizable.strings in Resources */,
 				E1164E351EF35D3300B9B565 /* PlainButtonCell.xib in Resources */,
 				71BE32AF2017B24E0009B26D /* GoogleService-Info.plist in Resources */,
-				337EB0771DD39BCB00733F9C /* SanFranciscoText-Medium.otf in Resources */,
 				33B53F251DD0ECD500462C66 /* (null) in Resources */,
 				E1164E311EF35D2300B9B565 /* SectionHeaderLabelCell.xib in Resources */,
 			);
@@ -1032,6 +1015,7 @@
 			files = (
 				3322888F1DD283CF001042CE /* BaseViewController.swift in Sources */,
 				E1164E451EF35D5E00B9B565 /* PlainButtonCellDelegate.swift in Sources */,
+				7113A604205884F2006EE760 /* Connectivity.swift in Sources */,
 				E1164E201EF35D0400B9B565 /* Results.swift in Sources */,
 				7182D7612039E2FB00A7A096 /* CoinsLocalDataManager.swift in Sources */,
 				332288811DD282D5001042CE /* BaseContract.swift in Sources */,
@@ -1166,7 +1150,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1214,7 +1198,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
