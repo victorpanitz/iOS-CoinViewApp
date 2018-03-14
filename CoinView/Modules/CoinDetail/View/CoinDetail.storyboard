@@ -20,7 +20,7 @@
         <!--Coin Detail View Controller-->
         <scene sceneID="fuf-2b-KsO">
             <objects>
-                <viewController storyboardIdentifier="CoinDetailViewController" id="CZx-xz-miV" customClass="CoinDetailViewController" customModule="Boilerplate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoinDetailViewController" id="CZx-xz-miV" customClass="CoinDetailViewController" customModule="CoinView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EwW-2C-K8N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="61" id="wbt-3V-tMq" customClass="CoinDetailCell" customModule="Boilerplate" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="61" id="wbt-3V-tMq" customClass="CoinDetailCell" customModule="CoinView" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wbt-3V-tMq" id="XJa-Pq-Jel">
@@ -103,7 +103,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t30-7z-nan">
-                                <rect key="frame" x="137" y="72" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="72" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Imi-Wf-z3F"/>
                                     <constraint firstAttribute="width" secondItem="t30-7z-nan" secondAttribute="height" multiplier="1:1" id="JBM-wc-oZV"/>

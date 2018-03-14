@@ -98,16 +98,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		332288801DD282D5001042CE /* BaseContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseContract.swift; path = Base/Contract/BaseContract.swift; sourceTree = "<group>"; };
-		3322888E1DD283CF001042CE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Base/View/BaseViewController.swift; sourceTree = "<group>"; };
+		332288801DD282D5001042CE /* BaseContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseContract.swift; sourceTree = "<group>"; };
+		3322888E1DD283CF001042CE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3328AE5E1DF9DB1D0067C544 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		3328AE641DF9ED590067C544 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		332F1C841DD33A790080B38D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Application/AppDelegate.swift; sourceTree = "<group>"; };
 		332F1C861DD33A790080B38D /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootRouter.swift; path = Application/RootRouter.swift; sourceTree = "<group>"; };
 		33B53F1C1DD0ECD500462C66 /* CoinView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B53F2B1DD0ECD500462C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33BE59951E36CCB4000661F6 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = Entities/UserProfile/UserProfile.swift; sourceTree = "<group>"; };
-		33BE59971E36CD07000661F6 /* ResponseErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseErrors.swift; path = Entities/UserProfile/ResponseErrors.swift; sourceTree = "<group>"; };
+		33BE59951E36CCB4000661F6 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		33BE59971E36CD07000661F6 /* ResponseErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseErrors.swift; sourceTree = "<group>"; };
 		33CAF4D71DD75B1600465298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		33CAF4D81DD75BDD00465298 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Application/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33D965901E946693001EDF07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets/Images/Assets.xcassets; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		71E370DF201677AF002859BF /* NewsListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListContract.swift; sourceTree = "<group>"; };
 		71E370E1201677EB002859BF /* NewsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableCell.swift; sourceTree = "<group>"; };
 		71E370E320168013002859BF /* NewsApiDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiDataManager.swift; sourceTree = "<group>"; };
-		71E370E52016D189002859BF /* MainSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainSearch.storyboard; path = MainSearch/View/MainSearch.storyboard; sourceTree = "<group>"; };
+		71E370E52016D189002859BF /* MainSearch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainSearch.storyboard; sourceTree = "<group>"; };
 		71FC6035200AC69C00D49016 /* MainCoinsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoinsViewController.swift; sourceTree = "<group>"; };
 		71FC6036200AC69C00D49016 /* mTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mTableViewCell.swift; sourceTree = "<group>"; };
 		71FC605A200AC76600D49016 /* MainSearchContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchContract.swift; sourceTree = "<group>"; };
@@ -323,31 +323,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		3322887B1DD28241001042CE /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				3322887D1DD2825B001042CE /* View */,
-				3322887C1DD2824B001042CE /* Contract */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		3322887C1DD2824B001042CE /* Contract */ = {
-			isa = PBXGroup;
-			children = (
-				332288801DD282D5001042CE /* BaseContract.swift */,
-			);
-			name = Contract;
-			sourceTree = "<group>";
-		};
-		3322887D1DD2825B001042CE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3322888E1DD283CF001042CE /* BaseViewController.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		3328AE501DF9D19B0067C544 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,16 +347,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		336133641DF0E63000D3E05B /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				71E370D6201672C2002859BF /* News */,
-				71E370D5201672B5002859BF /* Coins */,
-				33BE59941E36CC54000661F6 /* UserProfile */,
-			);
-			name = Entities;
-			sourceTree = "<group>";
-		};
 		33B3BBF01DE9B69C003ADD4C /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,7 +359,7 @@
 		33B53F131DD0ECD500462C66 = {
 			isa = PBXGroup;
 			children = (
-				33B53F1E1DD0ECD500462C66 /* Boilerplate */,
+				33B53F1E1DD0ECD500462C66 /* CoinView */,
 				33B53F1D1DD0ECD500462C66 /* Products */,
 				3067B7B1ED1EEAB4158768D4 /* Pods */,
 				3A2F7912797271B209F2D933 /* Frameworks */,
@@ -409,18 +374,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		33B53F1E1DD0ECD500462C66 /* Boilerplate */ = {
+		33B53F1E1DD0ECD500462C66 /* CoinView */ = {
 			isa = PBXGroup;
 			children = (
+				717B47782058F01700FC7484 /* Entities */,
 				33E031C5C8BB899C8D6BE189 /* Modules */,
-				336133641DF0E63000D3E05B /* Entities */,
 				332288531DD26388001042CE /* Utils */,
 				3322884F1DD2633B001042CE /* Assets */,
 				33B53F5B1DD0FD9500462C66 /* Application */,
 				33B53F2B1DD0ECD500462C66 /* Info.plist */,
 				71BE32AE2017B24E0009B26D /* GoogleService-Info.plist */,
 			);
-			path = Boilerplate;
+			path = CoinView;
 			sourceTree = "<group>";
 		};
 		33B53F5B1DD0FD9500462C66 /* Application */ = {
@@ -431,37 +396,6 @@
 				33CAF4D81DD75BDD00465298 /* LaunchScreen.storyboard */,
 			);
 			name = Application;
-			sourceTree = "<group>";
-		};
-		33BE59931E36CB00000661F6 /* CoinList */ = {
-			isa = PBXGroup;
-			children = (
-				71FC6060200AC76600D49016 /* Interactor */,
-				71FC605B200AC76600D49016 /* Presenter */,
-				71FC6059200AC76600D49016 /* Contract */,
-				71FC6062200AC76600D49016 /* Router */,
-				33BE59A71E36CE90000661F6 /* View */,
-			);
-			name = CoinList;
-			sourceTree = "<group>";
-		};
-		33BE59941E36CC54000661F6 /* UserProfile */ = {
-			isa = PBXGroup;
-			children = (
-				33BE59971E36CD07000661F6 /* ResponseErrors.swift */,
-				33BE59951E36CCB4000661F6 /* UserProfile.swift */,
-			);
-			name = UserProfile;
-			sourceTree = "<group>";
-		};
-		33BE59A71E36CE90000661F6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				71E370E52016D189002859BF /* MainSearch.storyboard */,
-				71FC6035200AC69C00D49016 /* MainCoinsViewController.swift */,
-				71FC6036200AC69C00D49016 /* mTableViewCell.swift */,
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		33D965921E9466FF001EDF07 /* DataManagers */ = {
@@ -495,12 +429,12 @@
 		33E031C5C8BB899C8D6BE189 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7182D74E2039C29D00A7A096 /* FavoriteCoinList */,
-				715787D820165BAB00DE5355 /* NewsList */,
-				33BE59931E36CB00000661F6 /* CoinList */,
-				71D43B0C200BEDB700841D89 /* CoinDetail */,
-				71F5C0DB20160DA400D0C977 /* TabBar */,
-				3322887B1DD28241001042CE /* Base */,
+				717B47502058ECDB00FC7484 /* Base */,
+				717B47512058ECE600FC7484 /* TabBar */,
+				717B47522058ECEA00FC7484 /* CoinDetail */,
+				717B47532058ECFF00FC7484 /* CoinList */,
+				717B47542058ED0200FC7484 /* NewsList */,
+				717B47552058ED0500FC7484 /* FavoriteCoinList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -531,241 +465,163 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		715787D820165BAB00DE5355 /* NewsList */ = {
+		717B47502058ECDB00FC7484 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				71E370CC20165CF3002859BF /* View */,
-				71E370CB20165CF0002859BF /* Presenter */,
-				71E370CA20165CED002859BF /* Interactor */,
-				71E370C920165CEB002859BF /* Router */,
-				71E370C820165CE7002859BF /* Contract */,
+				717B47742058ED8500FC7484 /* Contract */,
+				717B47732058ED8300FC7484 /* View */,
+			);
+			name = Base;
+			path = ../Base;
+			sourceTree = "<group>";
+		};
+		717B47512058ECE600FC7484 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				717B47722058ED7F00FC7484 /* View */,
+				717B47712058ED7D00FC7484 /* Presenter */,
+				717B47702058ED7B00FC7484 /* Interactor */,
+				717B476F2058ED7800FC7484 /* Router */,
+				717B476E2058ED7600FC7484 /* Contract */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		717B47522058ECEA00FC7484 /* CoinDetail */ = {
+			isa = PBXGroup;
+			children = (
+				717B476D2058ED7100FC7484 /* View */,
+				717B476C2058ED6F00FC7484 /* Presenter */,
+				717B476B2058ED6C00FC7484 /* Interactor */,
+				717B476A2058ED6800FC7484 /* Router */,
+				717B47692058ED6600FC7484 /* Contract */,
+			);
+			path = CoinDetail;
+			sourceTree = "<group>";
+		};
+		717B47532058ECFF00FC7484 /* CoinList */ = {
+			isa = PBXGroup;
+			children = (
+				717B47682058ED6100FC7484 /* View */,
+				717B47672058ED5E00FC7484 /* Presenter */,
+				717B47662058ED5C00FC7484 /* Interactor */,
+				717B47652058ED5900FC7484 /* Router */,
+				717B47642058ED5700FC7484 /* Contract */,
+			);
+			name = CoinList;
+			path = ../CoinList;
+			sourceTree = "<group>";
+		};
+		717B47542058ED0200FC7484 /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				717B47632058ED5300FC7484 /* View */,
+				717B47622058ED5100FC7484 /* Presenter */,
+				717B47612058ED4E00FC7484 /* Interactor */,
+				717B47602058ED4B00FC7484 /* Router */,
+				717B475F2058ED4900FC7484 /* Contract */,
 			);
 			name = NewsList;
+			path = ../NewsList;
 			sourceTree = "<group>";
 		};
-		7182D74E2039C29D00A7A096 /* FavoriteCoinList */ = {
+		717B47552058ED0500FC7484 /* FavoriteCoinList */ = {
 			isa = PBXGroup;
 			children = (
-				7182D74F2039C32400A7A096 /* View */,
-				7182D7532039C34E00A7A096 /* Presenter */,
-				7182D7512039C33600A7A096 /* Interactor */,
-				7182D7522039C34600A7A096 /* Contracts */,
-				7182D7502039C32A00A7A096 /* Router */,
+				717B475E2058ED4100FC7484 /* View */,
+				717B475D2058ED3E00FC7484 /* Presenter */,
+				717B475C2058ED3A00FC7484 /* Interactor */,
+				717B47592058ED1500FC7484 /* Router */,
+				717B47572058ED1000FC7484 /* Contract */,
 			);
 			name = FavoriteCoinList;
+			path = "New Group5";
 			sourceTree = "<group>";
 		};
-		7182D74F2039C32400A7A096 /* View */ = {
+		717B47572058ED1000FC7484 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				7182D75A2039C3D100A7A096 /* FavoriteCoinListContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		717B47592058ED1500FC7484 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				7182D75C2039C3DD00A7A096 /* FavoriteCoinListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		717B475C2058ED3A00FC7484 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7182D7582039C3C300A7A096 /* FavoriteCoinListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		717B475D2058ED3E00FC7484 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7182D7562039C3B800A7A096 /* FavoriteCoinListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		717B475E2058ED4100FC7484 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				7182D7542039C3A900A7A096 /* FavoriteCoinListViewController.swift */,
 				7182D75E2039C8C400A7A096 /* FavoriteCoinList.storyboard */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
-		7182D7502039C32A00A7A096 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				7182D75C2039C3DD00A7A096 /* FavoriteCoinListRouter.swift */,
-			);
-			name = Router;
-			sourceTree = "<group>";
-		};
-		7182D7512039C33600A7A096 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				7182D7582039C3C300A7A096 /* FavoriteCoinListInteractor.swift */,
-			);
-			name = Interactor;
-			sourceTree = "<group>";
-		};
-		7182D7522039C34600A7A096 /* Contracts */ = {
-			isa = PBXGroup;
-			children = (
-				7182D75A2039C3D100A7A096 /* FavoriteCoinListContract.swift */,
-			);
-			name = Contracts;
-			sourceTree = "<group>";
-		};
-		7182D7532039C34E00A7A096 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				7182D7562039C3B800A7A096 /* FavoriteCoinListPresenter.swift */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		71D43B0C200BEDB700841D89 /* CoinDetail */ = {
-			isa = PBXGroup;
-			children = (
-				71D43B11200BEE4C00841D89 /* View */,
-				71D43B10200BEE4400841D89 /* Router */,
-				71D43B0F200BEE3B00841D89 /* Contract */,
-				71D43B0E200BEE3400841D89 /* Presenter */,
-				71D43B0D200BEE2B00841D89 /* Interactor */,
-			);
-			name = CoinDetail;
-			sourceTree = "<group>";
-		};
-		71D43B0D200BEE2B00841D89 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				71687C0A201119EE00269A02 /* CoinDetailInteractor.swift */,
-			);
-			name = Interactor;
-			sourceTree = "<group>";
-		};
-		71D43B0E200BEE3400841D89 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				71687C08201119DD00269A02 /* CoinDetailPresenter.swift */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		71D43B0F200BEE3B00841D89 /* Contract */ = {
-			isa = PBXGroup;
-			children = (
-				71687C06201119D000269A02 /* CoinDetailContract.swift */,
-			);
-			name = Contract;
-			sourceTree = "<group>";
-		};
-		71D43B10200BEE4400841D89 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				71687C04201119C300269A02 /* CoinDetailRouter.swift */,
-			);
-			name = Router;
-			sourceTree = "<group>";
-		};
-		71D43B11200BEE4C00841D89 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				71687C02201119B300269A02 /* CoinDetailViewController.swift */,
-				71DF8D9320129B83004E634F /* CoinDetailCell.swift */,
-				71DF8D8F20127C47004E634F /* CoinDetail.storyboard */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		71E370C820165CE7002859BF /* Contract */ = {
+		717B475F2058ED4900FC7484 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
 				71E370DF201677AF002859BF /* NewsListContract.swift */,
 			);
-			name = Contract;
+			path = Contract;
 			sourceTree = "<group>";
 		};
-		71E370C920165CEB002859BF /* Router */ = {
+		717B47602058ED4B00FC7484 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				71E370DD201677A3002859BF /* NewsListRouter.swift */,
 			);
-			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
-		71E370CA20165CED002859BF /* Interactor */ = {
+		717B47612058ED4E00FC7484 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				71E370DB20167799002859BF /* NewsListInteractor.swift */,
 			);
-			name = Interactor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
-		71E370CB20165CF0002859BF /* Presenter */ = {
+		717B47622058ED5100FC7484 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				71E370D92016778C002859BF /* NewsListPresenter.swift */,
 			);
-			name = Presenter;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
-		71E370CC20165CF3002859BF /* View */ = {
+		717B47632058ED5300FC7484 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				71E370CD20165D4A002859BF /* NewsList.storyboard */,
 				71E370D720167711002859BF /* NewsListViewController.swift */,
 				71E370E1201677EB002859BF /* NewsTableCell.swift */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
-		71E370D5201672B5002859BF /* Coins */ = {
-			isa = PBXGroup;
-			children = (
-				71FC6075200AC82000D49016 /* Coin.swift */,
-				71FC6076200AC82000D49016 /* CoinAttributes.swift */,
-				717B78C62055709F00BD2966 /* CoinRealmEntity.swift */,
-			);
-			name = Coins;
-			sourceTree = "<group>";
-		};
-		71E370D6201672C2002859BF /* News */ = {
-			isa = PBXGroup;
-			children = (
-				71E370D3201672A1002859BF /* Source.swift */,
-				71E370D1201671D5002859BF /* Articles.swift */,
-				71E370CF20167113002859BF /* CryptoNews.swift */,
-			);
-			name = News;
-			sourceTree = "<group>";
-		};
-		71F5C0DB20160DA400D0C977 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				71F5C0DD201611CF00D0C977 /* Contract */,
-				71F5C0E0201611EB00D0C977 /* Router */,
-				71F5C0DF201611E400D0C977 /* Presenter */,
-				71F5C0DE201611DA00D0C977 /* Interactor */,
-				71F5C0DC201611C400D0C977 /* View */,
-			);
-			name = TabBar;
-			sourceTree = "<group>";
-		};
-		71F5C0DC201611C400D0C977 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				715787D4201616E000DE5355 /* TabBarController.swift */,
-				715787D62016485E00DE5355 /* TabBar.storyboard */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		71F5C0DD201611CF00D0C977 /* Contract */ = {
-			isa = PBXGroup;
-			children = (
-				715787CC2016169C00DE5355 /* TabBarContract.swift */,
-			);
-			name = Contract;
-			sourceTree = "<group>";
-		};
-		71F5C0DE201611DA00D0C977 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				715787D2201616D100DE5355 /* TabBarInteractor.swift */,
-			);
-			name = Interactor;
-			sourceTree = "<group>";
-		};
-		71F5C0DF201611E400D0C977 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				715787D0201616C500DE5355 /* TabBarPresenter.swift */,
-			);
-			name = Presenter;
-			sourceTree = "<group>";
-		};
-		71F5C0E0201611EB00D0C977 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				715787CE201616AC00DE5355 /* TabBarRouter.swift */,
-			);
-			name = Router;
-			sourceTree = "<group>";
-		};
-		71FC6059200AC76600D49016 /* Contract */ = {
+		717B47642058ED5700FC7484 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
 				71FC605A200AC76600D49016 /* MainSearchContract.swift */,
@@ -773,15 +629,15 @@
 			path = Contract;
 			sourceTree = "<group>";
 		};
-		71FC605B200AC76600D49016 /* Presenter */ = {
+		717B47652058ED5900FC7484 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				71FC605C200AC76600D49016 /* MainSearchPresenter.swift */,
+				71FC6063200AC76600D49016 /* MainSearchRouter.swift */,
 			);
-			path = Presenter;
+			path = Router;
 			sourceTree = "<group>";
 		};
-		71FC6060200AC76600D49016 /* Interactor */ = {
+		717B47662058ED5C00FC7484 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				71FC6061200AC76600D49016 /* MainSearchInteractor.swift */,
@@ -789,12 +645,161 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		71FC6062200AC76600D49016 /* Router */ = {
+		717B47672058ED5E00FC7484 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				71FC6063200AC76600D49016 /* MainSearchRouter.swift */,
+				71FC605C200AC76600D49016 /* MainSearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		717B47682058ED6100FC7484 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71E370E52016D189002859BF /* MainSearch.storyboard */,
+				71FC6035200AC69C00D49016 /* MainCoinsViewController.swift */,
+				71FC6036200AC69C00D49016 /* mTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		717B47692058ED6600FC7484 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				71687C06201119D000269A02 /* CoinDetailContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		717B476A2058ED6800FC7484 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				71687C04201119C300269A02 /* CoinDetailRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		717B476B2058ED6C00FC7484 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				71687C0A201119EE00269A02 /* CoinDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		717B476C2058ED6F00FC7484 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				71687C08201119DD00269A02 /* CoinDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		717B476D2058ED7100FC7484 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71687C02201119B300269A02 /* CoinDetailViewController.swift */,
+				71DF8D9320129B83004E634F /* CoinDetailCell.swift */,
+				71DF8D8F20127C47004E634F /* CoinDetail.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		717B476E2058ED7600FC7484 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				715787CC2016169C00DE5355 /* TabBarContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		717B476F2058ED7800FC7484 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				715787CE201616AC00DE5355 /* TabBarRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		717B47702058ED7B00FC7484 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				715787D2201616D100DE5355 /* TabBarInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		717B47712058ED7D00FC7484 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				715787D0201616C500DE5355 /* TabBarPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		717B47722058ED7F00FC7484 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				715787D4201616E000DE5355 /* TabBarController.swift */,
+				715787D62016485E00DE5355 /* TabBar.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		717B47732058ED8300FC7484 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3322888E1DD283CF001042CE /* BaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		717B47742058ED8500FC7484 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				332288801DD282D5001042CE /* BaseContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		717B47782058F01700FC7484 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				717B477B2058F02B00FC7484 /* News */,
+				717B477A2058F02300FC7484 /* Coins */,
+				717B47792058F01F00FC7484 /* Others */,
+			);
+			name = Entities;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		717B47792058F01F00FC7484 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				33BE59971E36CD07000661F6 /* ResponseErrors.swift */,
+				33BE59951E36CCB4000661F6 /* UserProfile.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		717B477A2058F02300FC7484 /* Coins */ = {
+			isa = PBXGroup;
+			children = (
+				71FC6075200AC82000D49016 /* Coin.swift */,
+				71FC6076200AC82000D49016 /* CoinAttributes.swift */,
+				717B78C62055709F00BD2966 /* CoinRealmEntity.swift */,
+			);
+			path = Coins;
+			sourceTree = "<group>";
+		};
+		717B477B2058F02B00FC7484 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				71E370D3201672A1002859BF /* Source.swift */,
+				71E370D1201671D5002859BF /* Articles.swift */,
+				71E370CF20167113002859BF /* CryptoNews.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1209,7 +1214,7 @@
 					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
 					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
 				);
-				INFOPLIST_FILE = Boilerplate/Info.plist;
+				INFOPLIST_FILE = CoinView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -1328,7 +1333,7 @@
 					"\"${PODS_ROOT}/Headers/Public/Crashlytics\"",
 					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
 				);
-				INFOPLIST_FILE = Boilerplate/Info.plist;
+				INFOPLIST_FILE = CoinView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
