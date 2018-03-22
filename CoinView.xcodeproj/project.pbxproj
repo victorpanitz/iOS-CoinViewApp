@@ -531,8 +531,7 @@
 				717B47592058ED1500FC7484 /* Router */,
 				717B47572058ED1000FC7484 /* Contract */,
 			);
-			name = FavoriteCoinList;
-			path = "New Group5";
+			path = FavoriteCoinList;
 			sourceTree = "<group>";
 		};
 		717B47572058ED1000FC7484 /* Contract */ = {
@@ -564,7 +563,8 @@
 			children = (
 				7182D7562039C3B800A7A096 /* FavoriteCoinListPresenter.swift */,
 			);
-			path = Presenter;
+			name = Presenter;
+			path = Presenter.swift;
 			sourceTree = "<group>";
 		};
 		717B475E2058ED4100FC7484 /* View */ = {
