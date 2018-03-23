@@ -1,6 +1,9 @@
 # Coin View App
 
-A great start point to introduce VIPER architecture, native animations and some nice frameworks integration.
+A great start point to create your own Cryptocurrencies app using VIPER architecture, native animations and some nice frameworks.
+
+![alt text](https://i.imgur.com/ern1nC1.jpg)
+
 
 ### Basic steps:
 
