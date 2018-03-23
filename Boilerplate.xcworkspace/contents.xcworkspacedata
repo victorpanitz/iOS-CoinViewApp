@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Workspace
-   version = "1.0">
-   <FileRef
-      location = "group:/Users/victormagalhaes/Desktop/Boilerplate_iOS_VIPER-master/CoinView.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-</Workspace>
+
