@@ -1,20 +1,19 @@
-# VIPER Boilerplate for iOS
+# Coin View App
 
-iOS Swift boilerplate with Xcode organized with VIPER structure plus useful Extensions and Utils.
-
+A great start point to introduce VIPER architecture, native animations and some nice frameworks integration.
 
 ### Basic steps:
 
-1 - Clone this repo (via git commands or SourceTree)
+1 - Create an account in Firebase
 
-2 - Open `Boilerplate.xcodeproj` and rename the project
+2 - Add your own google services file to the project
 
 3 - Run `pod install` on the project folder to download all dependencies with Cocoapods
 
 4 - Open `${Project_Name}.xcworkspace`
 
-5 - Analyse the project structure and start coding!
+5 - Analyse the project structure and take it to another level!
 
 ### Design pattern
 
-This boilerplate has the basic structure for coding with VIPER design pattern (read about it [here](https://www.ckl.io/blog/ios-project-architecture-using-viper/)).
+This boilerplate has the basic structure for coding with VIPER design pattern (read about it [here](https://www.ckl.io/blog/ios-project-architecture-using-viper/)). 
