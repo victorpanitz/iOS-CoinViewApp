@@ -19,4 +19,4 @@ A great start point to create your own Cryptocurrencies app using VIPER architec
 
 ### Design pattern
 
-This boilerplate has the basic structure for coding with VIPER design pattern (read about it [here](https://www.ckl.io/blog/ios-project-architecture-using-viper/)). 
+This project has the basic structure for coding with VIPER design pattern (read about it [here](https://www.ckl.io/blog/ios-project-architecture-using-viper/)). 
